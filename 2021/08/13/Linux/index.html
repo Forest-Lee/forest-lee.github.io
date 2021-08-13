@@ -936,7 +936,7 @@ lee@lee-virtual-machine:~$ <span class="token function">ls</span> -l *.pdf				  
 <span class="token comment"># 元字符通配符</span>
 lee@lee-virtual-machine:~$ <span class="token function">ls</span> -l f<span class="token punctuation">[</span>a-x<span class="token punctuation">]</span>ck.txt		  <span class="token comment"># '[]'指定该字符范围</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-  <img src="/frank-lee/2021/08/13/Linux/image-20210703081930187.png" class="" title="image-20210703081930187">
+  <img src="/frank-lee/2021/08/13/Linux/image-20210703081930187.png" class="">
 
 <blockquote>
 <p>  自己找的：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1114732?from=information.detail.linux">https://cloud.tencent.com/developer/article/1114732?from=information.detail.linux</a></p>
@@ -1585,10 +1585,10 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 <li>  通过各级的<code>exit</code>，也能发现父子shell</li>
 </ul>
 <p>过程如下：</p>
-<img src="/frank-lee/2021/08/13/Linux/image-20210804164631918.png" class="" title="image-20210804164631918">
+<img src="/frank-lee/2021/08/13/Linux/image-20210804164631918.png" class="">
 
 <h3 id="分号在命令中有什么作用"><a href="#分号在命令中有什么作用" class="headerlink" title="分号在命令中有什么作用"></a>分号在命令中有什么作用</h3><p><strong>分隔命令，依次执行</strong>  </p>
-<img src="/frank-lee/2021/08/13/Linux/image-20210804170609884.png" class="" title="image-20210804170609884">
+<img src="/frank-lee/2021/08/13/Linux/image-20210804170609884.png" class="">
 
 <blockquote>
 <p>  注：echo —— 输出指定的字符串或者变量</p>
@@ -1614,7 +1614,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 </blockquote>
 </li>
 </ul>
-<img src="/frank-lee/2021/08/13/Linux/image-20210804171759000.png" class="" title="image-20210804171759000">
+<img src="/frank-lee/2021/08/13/Linux/image-20210804171759000.png" class="">
 
 <h4 id="后台执行符-amp"><a href="#后台执行符-amp" class="headerlink" title="后台执行符&amp;"></a>后台执行符<code>&amp;</code></h4><p>后台解压文件并复制到指定目录：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">(</span>tar -zxvf <span class="token punctuation">..</span>. <span class="token punctuation">;</span> <span class="token function">tar</span> -zxvf <span class="token punctuation">..</span>.<span class="token punctuation">;</span> <span class="token function">cp</span> <span class="token punctuation">..</span>.<span class="token punctuation">)</span><span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1629,7 +1629,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 <blockquote>
 <p>  注：<code>&#123;&#125;</code>之间使用<code>;</code>结尾，并且注意空格</p>
 </blockquote>
-<img src="/frank-lee/2021/08/13/Linux/image-20210804174220085.png" class="" title="image-20210804174220085">
+<img src="/frank-lee/2021/08/13/Linux/image-20210804174220085.png" class="">
 
 <h3 id="外部命令和内建命令"><a href="#外部命令和内建命令" class="headerlink" title="外部命令和内建命令"></a>外部命令和内建命令</h3><blockquote>
 <p>  引入：windows中<em>任务管理器</em> 也是一个进程，Linux中<code>ps -f</code>命令也是一个进程，why？</p>
@@ -1727,7 +1727,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 <li><p>命令</p>
 <ul>
 <li><p>使用<code>printenv</code>查看所有全局变量，<code>printenv USER</code>查看全局变量USER</p>
-  <img src="/frank-lee/2021/08/13/Linux/image-20210805215618419.png" class="" title="image-20210805215618419">
+  <img src="/frank-lee/2021/08/13/Linux/image-20210805215618419.png" class="">
 
 <blockquote>
 <p>  注：不同发行版全局变量不一定相同</p>
@@ -1746,7 +1746,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 <li>  <strong>定义局部变量必须用小写！！！</strong></li>
 <li>  全局变量大写，下划线命名法</li>
 </ul>
-<img src="/frank-lee/2021/08/13/Linux/image-20210805221658764.png" class="" title="image-20210805221658764">
+<img src="/frank-lee/2021/08/13/Linux/image-20210805221658764.png" class="">
 
 <h3 id="定义全局变量"><a href="#定义全局变量" class="headerlink" title="定义全局变量"></a>定义全局变量</h3><ul>
 <li><p>  <code>export</code>：为shell变量或函数设置导出属性</p>
@@ -1756,9 +1756,9 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 <li><p>  自己定义全局变量也推荐用小写（一般系统变量大写</p>
 </li>
 </ul>
-<img src="/frank-lee/2021/08/13/Linux/image-20210805222531898.png" class="" title="image-20210805222531898">
+<img src="/frank-lee/2021/08/13/Linux/image-20210805222531898.png" class="">
 
-<img src="/frank-lee/2021/08/13/Linux/image-20210805223244058.png" class="" title="image-20210805223244058">
+<img src="/frank-lee/2021/08/13/Linux/image-20210805223244058.png" class="">
 
 <blockquote>
 <p>  注：这里使用echo已经发现dir无效，但还能执行，不懂…        </p>
@@ -1769,7 +1769,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 </li>
 <li><p>```shell<br>  PATH=$PATH:/home/lee/Project</p>
   <pre class="line-numbers language-none"><code class="language-none">
-    ![image-20210805224731308](Linux&#x2F;image-20210805224731308.png)
+    ![](Linux&#x2F;image-20210805224731308.png)
 
     &gt;   注：如此配置在退出后重新打开会失效
 
@@ -1786,7 +1786,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 -   &#96;&#96;&#96;shell
     cat &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-  <img src="/frank-lee/2021/08/13/Linux/image-20210805225615727.png" class="" title="image-20210805225615727"></li>
+  <img src="/frank-lee/2021/08/13/Linux/image-20210805225615727.png" class=""></li>
 <li><p>一个目录 —— 常见的不同发行版中用来配置永久环境变量的目录</p>
 <ul>
 <li><p>  ~/.bashrc(Ubuntu)        ~/.bash_profile        ~/.profile        ~/.bash_login</p>
@@ -1818,7 +1818,7 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 </ul>
 <h3 id="安装、更新、卸载"><a href="#安装、更新、卸载" class="headerlink" title="安装、更新、卸载"></a>安装、更新、卸载</h3><ul>
 <li><p><code>apt - h</code>查看apt帮助文档</p>
-  <img src="/frank-lee/2021/08/13/Linux/image-20210806132831519.png" class="" title="image-20210806132831519"></li>
+  <img src="/frank-lee/2021/08/13/Linux/image-20210806132831519.png" class=""></li>
 <li><p>  更新 <code>sudo apt update</code></p>
 </li>
 <li><p>  升级 <code>sudo apt upgrade</code></p>
@@ -1931,7 +1931,7 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
   <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">tail</span> /etc/group<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>  Ubuntu为每一个用户创建一个单独的组</p>
-  <img src="/frank-lee/2021/08/13/Linux/image-20210808174845478.png" class="" title="image-20210808174845478">
+  <img src="/frank-lee/2021/08/13/Linux/image-20210808174845478.png" class="">
 
 <p>  Groupname Password GID 属于该组的成员列表</p>
 </li>
@@ -1949,7 +1949,7 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
 <li>  d — 目录；- — 文件；l — link file；b — 装置文件里面的可供储存的接口设备(可随机存取装置)；c — 装置文件里面的串行端口设备（如鼠标、键盘）</li>
 </ul>
 </li>
-<li>  <img src="/frank-lee/2021/08/13/Linux/image-20210808180751532.png" class="" title="image-20210808180751532"></li>
+<li>  <img src="/frank-lee/2021/08/13/Linux/image-20210808180751532.png" class=""></li>
 </ul>
 <h3 id="作业：自学chmod命令"><a href="#作业：自学chmod命令" class="headerlink" title="作业：自学chmod命令"></a>作业：自学chmod命令</h3><ul>
 <li><p>chmod — change mode</p>
@@ -2002,8 +2002,8 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
 <span class="token function">chmod</span> --reference<span class="token operator">=</span>./1.log  ./test.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>两图熟记</p>
 <ol>
-<li>  <img src="/frank-lee/2021/08/13/Linux/image-20210810184853875.png" class="" title="image-20210810184853875"></li>
-<li><img src="/frank-lee/2021/08/13/Linux/image-20210810185009852.png" class="" title="image-20210810185009852">
+<li>  <img src="/frank-lee/2021/08/13/Linux/image-20210810184853875.png" class=""></li>
+<li><img src="/frank-lee/2021/08/13/Linux/image-20210810185009852.png" class="">
 
 <blockquote>
 <p>  详见：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chmod.html">Linux chmod命令</a></p>
@@ -2080,7 +2080,7 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
 </ul>
 </li>
 <li><p>实例</p>
-  <img src="/frank-lee/2021/08/13/Linux/image-20210813114950874.png" class="" title="image-20210813114950874"></li>
+  <img src="/frank-lee/2021/08/13/Linux/image-20210813114950874.png" class=""></li>
 </ul>
 <h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><blockquote>
 <p>  my tip：记住HJKL，两端是左右，中间是上下</p>
@@ -2423,11 +2423,11 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
 <li><p>  显示行号后，快速进入该行行首 — 命令：<code>number + gg</code></p>
 </li>
 <li><p><code>vim .</code> —— 通过vim查看当前目录所有文件</p>
-  <img src="/frank-lee/2021/08/13/Linux/image-20210813151830423.png" class="" title="image-20210813151830423"></li>
+  <img src="/frank-lee/2021/08/13/Linux/image-20210813151830423.png" class=""></li>
 </ul>
 <hr>
 <h1 id="十一：server"><a href="#十一：server" class="headerlink" title="十一：server"></a>十一：server</h1><h3 id="Linux-Server"><a href="#Linux-Server" class="headerlink" title="Linux Server"></a>Linux Server</h3><p>安装Ubuntu Server，设置（更换镜像源<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu%EF%BC%8C%E5%85%B6%E4%BD%99%E5%9F%BA%E6%9C%AC%E7%9B%B4%E6%8E%A5Done%EF%BC%89%EF%BC%8C%E6%9B%B4%E6%96%B0">http://mirrors.aliyun.com/ubuntu，其余基本直接Done），更新</a></p>
-<img src="/frank-lee/2021/08/13/Linux/image-20210808201237317.png" class="" title="image-20210808201237317">
+<img src="/frank-lee/2021/08/13/Linux/image-20210808201237317.png" class="">
 
 <h3 id="SSH远程登录"><a href="#SSH远程登录" class="headerlink" title="SSH远程登录"></a>SSH远程登录</h3><p>安装<code>net-tools</code>和<code>ssh</code>，<code>ifconfig</code>查看ip，通过putty连接到server</p>
 <blockquote>
