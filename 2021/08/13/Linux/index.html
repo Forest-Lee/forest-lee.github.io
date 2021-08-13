@@ -748,112 +748,103 @@ Minimal Installtion（无多余软件）
 </li>
 <li><p>Text 字体不要随便调，要使用等宽字体</p>
 </li>
-<li><p>```<br>  lee@lee-virtual-machine:~$<br>  userName@deviceName:<br>  ~ 用户home目录<br>  $ 等待用户输入</p>
-  <pre class="line-numbers language-none"><code class="language-none">
-### 2.ls初使用
-
-&gt;   搞定Linux命令参数，得心应手使用各类命令 —— 授之以渔  先拿ls开张
-
--   &#96;&#96;&#96;shell
-    ls<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>  ls - list directory contents 展示当前目录下的所有目录</p>
-<p>  ls -a -l … 可以多选项，但需要空格间隔开；或直接 ls -al。</p>
-</li>
-<li><p>```shell<br>  man ls</p>
-  <pre class="line-numbers language-none"><code class="language-none">
-    进入 User Commands, 并为你展示该命令的详细内容
-
--   &#96;&#96;&#96;shell
-    ls -l -a(可用 ll 直接代替)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>  展示当前目录下的所有文件（包括隐藏文件） PS：隐藏文件以“.”开头</p>
-</li>
+<li><p>认识</p>
+  <pre class="line-numbers language-none"><code class="language-none">lee@lee-virtual-machine:~$
+userName@deviceName:
+~ 用户home目录 
+$ 等待用户输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<h3 id="3-Linux-根目录"><a href="#3-Linux-根目录" class="headerlink" title="3.Linux 根目录"></a>3.<strong>Linux 根目录</strong></h3><ul>
-<li><p>Windows 分盘，盘符：D: E: F: …</p>
-<p>  盘符: 路径    eg：E:\DevTools\IDEA\IntelliJ IDEA 2020.3.2\bin  </p>
-</li>
-<li><p><strong>Linux 一切皆文件</strong></p>
-<p>  /home/lee/Documents/1.txt</p>
-<p>  所以 Linux 尽量不显示隐藏文件，防止误操作。</p>
-</li>
-<li><p>  <strong>/ —— Linux 的根目录</strong></p>
-</li>
-</ul>
-<h3 id="4-Linux-根目录解析"><a href="#4-Linux-根目录解析" class="headerlink" title="4.Linux 根目录解析"></a>4.<strong>Linux 根目录解析</strong></h3><ul>
-<li><p>目录解析：</p>
-<ul>
-<li><p>  / —— 根目录</p>
-</li>
-<li><p>  /bin —— GNU工具、ls等系统自带命令</p>
-</li>
-<li><p>  /cdrom —— 光驱</p>
-</li>
-<li><p>  /etc —— 系统配置文件目录</p>
-</li>
-<li><p>  /home —— 主目录，显示所有用户目录</p>
-</li>
-<li><p>  /lib —— 库目录</p>
-</li>
-<li><p>  /lost+found —— 意外情况（如停电）中有文件存在这</p>
-</li>
-<li><p>  /mnt —— 挂载目录（挂载：外在设备与主机连接）</p>
-</li>
-<li><p>  proc —— 伪文件系统</p>
-</li>
-<li><p>  /run —— 运行目录</p>
-</li>
-<li><p>  /tmp —— 临时目录</p>
-</li>
-<li><p>  /var —— 可变目录（eg：存放log日志文件）</p>
-</li>
-<li><p>  /boot —— 启动目录</p>
-</li>
-<li><p>  /dev —— 设备目录</p>
-</li>
-<li><p>  /media —— 媒体目录</p>
-</li>
-<li><p>  /opt —— 可选目录（第三方软件一般在这）</p>
-</li>
-<li><p>  /root —— root用户（管理员）的主目录</p>
-</li>
-<li><p>  /sbin —— 系统二进制目录，GNU高级管理员使用的命令工具</p>
-</li>
-<li><p>  /srv —— 服务目录（本地服务）</p>
-</li>
-<li><p>  /usr —— 用户二进制目录</p>
-</li>
-</ul>
-</li>
-<li><p>FHS —— 文件系统层级标准</p>
-<blockquote>
-<p>  pathname.com/fhs（上面目录解析的升级、专业版）</p>
-<p>  ‪F:\07.Linux\资料\fhs-2.3.pdf（本地文件所在地）</p>
+<h3 id="2-ls初使用"><a href="#2-ls初使用" class="headerlink" title="2.ls初使用"></a>2.ls初使用</h3><blockquote>
+<p>  搞定Linux命令参数，得心应手使用各类命令 —— 授之以渔  先拿ls开张</p>
 </blockquote>
-</li>
-</ul>
-<h3 id="5-Linux-上的路径与Windows-上的路径"><a href="#5-Linux-上的路径与Windows-上的路径" class="headerlink" title="5.Linux 上的路径与Windows 上的路径"></a>5.<strong>Linux 上的路径与Windows 上的路径</strong></h3><ul>
-<li><p><strong>绝对路径：文件的完整路径</strong></p>
-<p>  盘符:\文件夹\…\文件名.文件后缀名（Win）        ~/文件夹/…/文件名.文件后缀名（Linux）</p>
-<p>  eg：G:\Game\Epic\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe</p>
-<p>  ​        /home/lee/Documents/doc/1.txt</p>
-</li>
-<li><p><strong>相对路径：相对于当前目录的路径</strong></p>
-<p>  eg：G:\Game        (.)\Epic\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe</p>
-</li>
-<li><p>```<br>  单点符.    当前目录<br>  双点符..    当前目录的父目录</p>
+<ul>
+<li><p>```shell<br>  ls</p>
   <pre class="line-numbers language-none"><code class="language-none">
--   注意区分
+    ls - list directory contents 展示当前目录下的所有目录
 
-    &#96;&#96;&#96;shell
-    lee@lee-virtual-machine:~$ gedit (.&#x2F;)Documents&#x2F;doc&#x2F;1.txt # 不加&#x2F;表示相对路径
-    lee@lee-virtual-machine:~$ gedit &#x2F;Documents&#x2F;doc&#x2F;1.txt # 加&#x2F;表示绝对路径
-    
-    # 等效路径
-    lee@lee-virtual-machine:~$ gedit Documents&#x2F;doc&#x2F;1.txt
-    lee@lee-virtual-machine:~$ gedit .&#x2F;Documents&#x2F;doc&#x2F;1.txt
-    lee@lee-virtual-machine:~$ gedit ~&#x2F;Documents&#x2F;doc&#x2F;1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+    ls -a -l ... 可以多选项，但需要空格间隔开；或直接 ls -al。
+
+-   &#96;&#96;&#96;shell
+    man ls<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  进入 User Commands, 并为你展示该命令的详细内容</p>
+</li>
+<li><p>```shell<br>  ls -l -a(可用 ll 直接代替)</p>
+  <pre class="line-numbers language-none"><code class="language-none">
+    展示当前目录下的所有文件（包括隐藏文件） PS：隐藏文件以“.”开头
+
+### 3.**Linux 根目录**
+
+-   Windows 分盘，盘符：D: E: F: ...
+
+    盘符: 路径	eg：E:\DevTools\IDEA\IntelliJ IDEA 2020.3.2\bin  
+
+-   **Linux 一切皆文件**
+
+    &#x2F;home&#x2F;lee&#x2F;Documents&#x2F;1.txt
+
+    所以 Linux 尽量不显示隐藏文件，防止误操作。
+
+-   **&#x2F; —— Linux 的根目录**
+
+### 4.**Linux 根目录解析**
+
+-   目录解析：
+
+    -   &#x2F; —— 根目录
+
+    -   &#x2F;bin —— GNU工具、ls等系统自带命令
+
+    -   &#x2F;cdrom —— 光驱
+    -   &#x2F;etc —— 系统配置文件目录
+    -   &#x2F;home —— 主目录，显示所有用户目录
+    -   &#x2F;lib —— 库目录
+    -   &#x2F;lost+found —— 意外情况（如停电）中有文件存在这
+    -   &#x2F;mnt —— 挂载目录（挂载：外在设备与主机连接）
+    -   proc —— 伪文件系统
+    -   &#x2F;run —— 运行目录
+    -   &#x2F;tmp —— 临时目录
+    -   &#x2F;var —— 可变目录（eg：存放log日志文件）
+    -   &#x2F;boot —— 启动目录
+    -   &#x2F;dev —— 设备目录
+    -   &#x2F;media —— 媒体目录
+    -   &#x2F;opt —— 可选目录（第三方软件一般在这）
+    -   &#x2F;root —— root用户（管理员）的主目录
+    -   &#x2F;sbin —— 系统二进制目录，GNU高级管理员使用的命令工具
+    -   &#x2F;srv —— 服务目录（本地服务）
+    -   &#x2F;usr —— 用户二进制目录
+
+-   FHS —— 文件系统层级标准
+
+    &gt;   pathname.com&#x2F;fhs（上面目录解析的升级、专业版）
+    &gt;
+    &gt;   ‪F:\07.Linux\资料\fhs-2.3.pdf（本地文件所在地）
+
+### 5.**Linux 上的路径与Windows 上的路径**
+
+-   **绝对路径：文件的完整路径**
+
+    盘符:\文件夹\\...\文件名.文件后缀名（Win）		~&#x2F;文件夹&#x2F;...&#x2F;文件名.文件后缀名（Linux）
+
+    eg：G:\Game\Epic\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe
+
+    ​		&#x2F;home&#x2F;lee&#x2F;Documents&#x2F;doc&#x2F;1.txt
+
+-   **相对路径：相对于当前目录的路径**
+
+    eg：G:\Game        (.)\Epic\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe
+
+-   &#96;&#96;&#96;
+    单点符.	当前目录
+    双点符..	当前目录的父目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>注意区分</p>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@lee-virtual-machine:~$ gedit <span class="token punctuation">(</span>./<span class="token punctuation">)</span>Documents/doc/1.txt <span class="token comment"># 不加/表示相对路径</span>
+lee@lee-virtual-machine:~$ gedit /Documents/doc/1.txt <span class="token comment"># 加/表示绝对路径</span>
+
+<span class="token comment"># 等效路径</span>
+lee@lee-virtual-machine:~$ gedit Documents/doc/1.txt
+lee@lee-virtual-machine:~$ gedit ./Documents/doc/1.txt
+lee@lee-virtual-machine:~$ gedit ~/Documents/doc/1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="6-cd命令"><a href="#6-cd命令" class="headerlink" title="6.cd命令"></a>6.<strong>cd命令</strong></h3><ul>
 <li><p>```<br>  cd [-L|[-P [-e]]] [dir]</p>
@@ -3002,7 +2993,7 @@ chpasswd <span class="token operator">&lt;</span> user.txt<span aria-hidden="tru
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">15.4k</span>
+                        class="white-color">15.5k</span>
             
             
             
