@@ -356,6 +356,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/frank-lee/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E5%8F%8A%E6%96%B9%E5%90%91/" class="post-category">
+                                计算机入门及方向
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -446,7 +455,7 @@
 <h4 id="win10官方镜像网站"><a href="#win10官方镜像网站" class="headerlink" title="win10官方镜像网站"></a>win10官方镜像网站</h4><blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10/">https://www.microsoft.com/zh-cn/software-download/windows10/</a></p>
 </blockquote>
-<h4 id="Ctrl-Alt-释放鼠标，回到真实机"><a href="#Ctrl-Alt-释放鼠标，回到真实机" class="headerlink" title="Ctrl + Alt    释放鼠标，回到真实机"></a>Ctrl + Alt    释放鼠标，回到真实机</h4><pre class="line-numbers language-none"><code class="language-none"># 备忘录——这台电脑用来学习的Ubuntu Server虚拟机
+<h4 id="Ctrl-Alt-释放鼠标，回到真实机"><a href="#Ctrl-Alt-释放鼠标，回到真实机" class="headerlink" title="Ctrl + Alt    释放鼠标，回到真实机"></a>Ctrl + Alt    释放鼠标，回到真实机</h4><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 备忘录——这台电脑用来学习的Ubuntu Server虚拟机
 # ip
 ~$ ifconfig
 # login
@@ -464,58 +473,60 @@ pswd:123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p><a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/ubuntu/">https://mirrors.aliyun.com/ubuntu/</a></p>
 </blockquote>
 <p>拿到系统一定要先</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>设置root密码</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo passwd root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo passwd root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>小火车试运行：sl</p>
-<pre class="line-numbers language-none"><code class="language-none">Ctrl+L # 清屏
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Ctrl+L # 清屏
 Ctrl+U # 清行
 ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>安装必要软件</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h4><p>本质——传输命令</p>
 <p>(eg.在PuTTY中输入ls命令，通过SSH协议连接到ubuntu虚拟机，执行ls命令，然后返回结果给PuTTY)</p>
-<pre class="line-numbers language-none"><code class="language-none">ssh id@xxx.xxx.x.x(IP)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ssh id@xxx.xxx.x.x(IP)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>公司不会给你暴露IP地址，但会给你密钥，你离职时会删除</p>
 <p>推荐：XShell 功能更强，但是要钱；我们用的是PuTTY。</p>
 <h4 id="Linux中：粘贴-右键单击"><a href="#Linux中：粘贴-右键单击" class="headerlink" title="Linux中：粘贴 == 右键单击"></a>Linux中：粘贴 == 右键单击</h4><h4 id="代码怎么放到网站上？"><a href="#代码怎么放到网站上？" class="headerlink" title="代码怎么放到网站上？"></a>代码怎么放到网站上？</h4><p>文件传输 基于FTP协议</p>
-<p>1.部署到GitHub等代码管理上（如Git）【现在都用这个】</p>
-<p>2.FTP传输</p>
+<ol>
+<li><p>  部署到GitHub等代码管理上（如Git）【现在都用这个】</p>
+</li>
+<li><p>  FTP传输</p>
+</li>
+</ol>
 <p>查看IP</p>
-<pre class="line-numbers language-none"><code class="language-none">~$ ifconfig<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ifconfig<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>查看内存（-m 以MB为单位 ~代表用户目录）</p>
-<pre class="line-numbers language-none"><code class="language-none">~$ free -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">free -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>补全命令</p>
-<pre class="line-numbers language-none"><code class="language-none">tab键<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<p>补全命令 —— <code>tab</code>键</p>
 <p>进入工程文件夹</p>
-<pre class="line-numbers language-none"><code class="language-none">vim .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">vim .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="Linux中安装软件举例"><a href="#Linux中安装软件举例" class="headerlink" title="Linux中安装软件举例"></a>Linux中安装软件举例</h4><p>安装nodejs</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install nodejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install nodejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装yarn —— <strong>“安全+可靠+快”的包管理器（基于npm)</strong></p>
 <p>第一步——配置仓库</p>
-<pre class="line-numbers language-none"><code class="language-none">curl -sS https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F;pubkey.gpg | sudo apt-key add -echo &quot;deb https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F; stable main&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;yarn.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">curl -sS https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F;pubkey.gpg | sudo apt-key add -echo &quot;deb https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F; stable main&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;yarn.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>第二步——安装</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt-get update &amp;&amp; sudo apt-get install yarn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get update &amp;&amp; sudo apt-get install yarn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>第三步——检查</p>
-<pre class="line-numbers language-none"><code class="language-none">yarn -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>配置</p>
-<pre class="line-numbers language-none"><code class="language-none">yarn config set registry https:&#x2F;&#x2F;registry.yarnpkg.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn config set registry https:&#x2F;&#x2F;registry.yarnpkg.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装pm2</p>
-<pre class="line-numbers language-none"><code class="language-none">yarn global add pm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn global add pm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="后端语言：Java-Go-Nodejs-C-NET-Python-PHP"><a href="#后端语言：Java-Go-Nodejs-C-NET-Python-PHP" class="headerlink" title="后端语言：Java/Go/Nodejs/C#(.NET)/Python/PHP"></a>后端语言：Java/Go/Nodejs/C#(.NET)/Python/PHP</h3><blockquote>
 <p>JSP –&gt; 在html里面扩展java代码 eg: &lt;%for…%&gt;</p>
@@ -533,12 +544,20 @@ ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><sp
 <h4 id="Express的搭建"><a href="#Express的搭建" class="headerlink" title="Express的搭建"></a>Express的搭建</h4><ul>
 <li>基于 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a> 平台，快速、开放、极简的 Web 开发框架</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">~$ yarn init~$ git init~$ yarn add express # 安装~$ touch app.js # 复制helloworld代码~$ node app.js # 启动服务# 在app.js中app.get()上添加：app.use(express.static(&#39;public&#39;));~$ mkdir public~$ cd public~$ vim hello.html # 随便写个静态网页~$ cd ..~$ node app.js # 启动服务，进入&#x2F;public，就看的到了<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn init
+git init
+yarn add express # 安装
+touch app.js # 复制helloworld代码
+node app.js # 启动服务
+# 在app.js中app.get()上添加：app.use(express.static(&#39;public&#39;));
+mkdir public
+cd public~$ vim hello.html # 随便写个静态网页~$ cd ..~$ node app.js # 启动服务，进入&#x2F;public，就看的到了<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h4><ul>
 <li>PM2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">~$ sudo yarn global add pm2# 进入目标工程文件夹下~$ pm2 start app.js # 启动服务，可以在同个工程下页面间互相链接了<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yarn global add pm2# 进入目标工程文件夹下
+pm2 start app.js # 启动服务，可以在同个工程下页面间互相链接了<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>区别<ul>
@@ -595,7 +614,7 @@ ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><sp
 <h2 id="9-Github"><a href="#9-Github" class="headerlink" title="9. Github"></a>9. Github</h2><ul>
 <li>git克隆（尽量别直接Download）</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">~$ git clone url<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git clone url<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="10-注意休息，-尽可能不要透支身体"><a href="#10-注意休息，-尽可能不要透支身体" class="headerlink" title="10. 注意休息， 尽可能不要透支身体"></a>10. 注意休息， 尽可能不要透支身体</h2>
                 
@@ -1125,8 +1144,12 @@ ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><sp
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Frank Lee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/frank-lee/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E5%8F%8A%E6%96%B9%E5%90%91/" class="post-category">
+                                    计算机入门及方向
+                                </a>
+                            
                             
                         </span>
                     </div>
