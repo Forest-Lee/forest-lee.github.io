@@ -30,7 +30,7 @@
 
     <script src="/frank-lee/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/frank-lee/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 
@@ -390,7 +390,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    14.6k
+                    14.9k
                 </div>
                 
 
@@ -406,6 +406,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/frank-lee/libs/prism/prism.css">
         
 
         
@@ -516,24 +519,20 @@
 </blockquote>
 </li>
 <li><p>在VMware Workstation 中新建虚拟机，选用已下载的 .iso 镜像文件，自定义相关配置如下</p>
-<pre><code>Ubuntu 64位
+  <pre class="line-numbers language-none"><code class="language-none">Ubuntu 64位
 8G内存
 2*2处理器
 将虚拟磁盘存储为单个性能（可提升性能）
 移除打印机
-命名：Ubuntu2004x64
-</code></pre>
-</li>
+命名：Ubuntu2004x64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>Ubuntu 安装设置</p>
-<pre><code>English
+  <pre class="line-numbers language-none"><code class="language-none">English
 Minimal Installtion（无多余软件）
 默认格式化磁盘
 选择位置：Xi&#39;an
 用户名：Lee
 密码：123456
-跳过Install更新过程。后续可以更新阿里镜像源后再update
-</code></pre>
-</li>
+跳过Install更新过程。后续可以更新阿里镜像源后再update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="2-VMware-Tools"><a href="#2-VMware-Tools" class="headerlink" title="2.VMware Tools"></a>2.VMware Tools</h3><ul>
 <li><p>更新阿里镜像源：</p>
@@ -543,18 +542,16 @@ Minimal Installtion（无多余软件）
 <p>  打开第二个 Software -&gt; update -&gt; restart</p>
 </li>
 <li><p>安装 vmware tools：</p>
-<pre><code>将 vm.tar.gz 复制到 Desktop
+  <pre class="line-numbers language-none"><code class="language-none">将 vm.tar.gz 复制到 Desktop
 打开 terminal
-命令：ls        查找，发现.tar文件
-命令：tar zxvf VM + Tab键        解压缩
-命令：cd vmare-tools-dirstri        进入解压缩文件夹
-命令：ls        查找，发现vmware-install.pl文件
-命令：sudo ./vmware-install.pl        执行安装命令
+命令：ls		查找，发现.tar文件
+命令：tar zxvf VM + Tab键		解压缩
+命令：cd vmare-tools-dirstri		进入解压缩文件夹
+命令：ls		查找，发现vmware-install.pl文件
+命令：sudo .&#x2F;vmware-install.pl		执行安装命令
 输入密码
 一路回车
-安装成功，删除.tar文件
-</code></pre>
-</li>
+安装成功，删除.tar文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="3-Ubuntu-20-04设置"><a href="#3-Ubuntu-20-04设置" class="headerlink" title="3.Ubuntu 20.04设置"></a>3.Ubuntu 20.04设置</h3><ul>
 <li><p>Settings</p>
@@ -687,25 +684,23 @@ Minimal Installtion（无多余软件）
 <li><p>Text 字体不要随便调，要使用等宽字体</p>
 </li>
 <li><p>认识</p>
-<pre><code>lee@lee-virtual-machine:~$
+  <pre class="line-numbers language-none"><code class="language-none">lee@lee-virtual-machine:~$
 userName@deviceName:
 ~ 用户home目录 
-$ 等待用户输入
-</code></pre>
-</li>
+$ 等待用户输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="2-ls初使用"><a href="#2-ls初使用" class="headerlink" title="2.ls初使用"></a>2.ls初使用</h3><blockquote>
 <p>  搞定Linux命令参数，得心应手使用各类命令 —— 授之以渔  先拿ls开张</p>
 </blockquote>
-<pre class=" language-shell"><code class="language-shell">ls
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>ls - list directory contents 展示当前目录下的所有目录</p>
 <p>ls -a -l … 可以多选项，但需要空格间隔开；或直接 ls -al。</p>
-<pre class=" language-shell"><code class="language-shell">man ls
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">man ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>进入 User Commands, 并为你展示该命令的详细内容</p>
-<pre class=" language-shell"><code class="language-shell">ls -l -a(可用 ll 直接代替)
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls -l -a(可用 ll 直接代替)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>展示当前目录下的所有文件（包括隐藏文件） PS：隐藏文件以“.”开头</p>
 <h3 id="3-Linux-根目录"><a href="#3-Linux-根目录" class="headerlink" title="3.Linux 根目录"></a>3.Linux 根目录</h3><ul>
 <li><p>Windows 分盘，盘符：D: E: F: …</p>
@@ -780,25 +775,22 @@ $ 等待用户输入
 <p>  eg：G:\Game        (.)\Epic\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe</p>
 </li>
 <li><p>单点符与双点符</p>
-<pre><code>单点符.    当前目录
-双点符..    当前目录的父目录
-</code></pre>
+  <pre class="line-numbers language-none"><code class="language-none">单点符.	当前目录
+双点符..	当前目录的父目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>注意区分</p>
-<pre class=" language-shell"><code class="language-shell">lee@lee-virtual-machine:~$ gedit (./)Documents/doc/1.txt # 不加/表示相对路径
-lee@lee-virtual-machine:~$ gedit /Documents/doc/1.txt # 加/表示绝对路径
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@lee-virtual-machine:~$ gedit (.&#x2F;)Documents&#x2F;doc&#x2F;1.txt # 不加&#x2F;表示相对路径
+lee@lee-virtual-machine:~$ gedit &#x2F;Documents&#x2F;doc&#x2F;1.txt # 加&#x2F;表示绝对路径
 
 # 等效路径
-lee@lee-virtual-machine:~$ gedit Documents/doc/1.txt
-lee@lee-virtual-machine:~$ gedit ./Documents/doc/1.txt
-lee@lee-virtual-machine:~$ gedit ~/Documents/doc/1.txt
-</code></pre>
-</li>
+lee@lee-virtual-machine:~$ gedit Documents&#x2F;doc&#x2F;1.txt
+lee@lee-virtual-machine:~$ gedit .&#x2F;Documents&#x2F;doc&#x2F;1.txt
+lee@lee-virtual-machine:~$ gedit ~&#x2F;Documents&#x2F;doc&#x2F;1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="6-cd命令"><a href="#6-cd命令" class="headerlink" title="6.cd命令"></a>6.cd命令</h3><ul>
 <li><p>cd — change directory</p>
-<pre><code>cd [-L|[-P [-e]]] [dir]
-</code></pre>
+  <pre class="line-numbers language-none"><code class="language-none">cd [-L|[-P [-e]]] [dir]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  切换用户当前工作目录</p>
 <h4 id="主要用途"><a href="#主要用途" class="headerlink" title="主要用途"></a>主要用途</h4><ul>
 <li>  切换工作目录至<code>dir</code>。其中<code>dir</code>的表示法可以是绝对路径或相对路径。</li>
@@ -808,80 +800,73 @@ lee@lee-virtual-machine:~$ gedit ~/Documents/doc/1.txt
 <li>  当<code>shopt</code>选项<code>cdable_vars</code>打开时，如果<code>dir</code>在<code>CDPATH</code>及当前目录下均不存在，那么会把它当作变量，读取它的值作为要进入的目录。</li>
 </ul>
 <h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>  dir（可选）：指定要切换到的目录。</p>
-<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-L （默认值）如果要切换到的目标目录是一个符号连接，那么切换到符号连接的目录。
+<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-L （默认值）如果要切换到的目标目录是一个符号连接，那么切换到符号连接的目录。
 -P 如果要切换到的目标目录是一个符号连接，那么切换到它指向的物理位置目录。
--  当前工作目录将被切换到环境变量OLDPWD所表示的目录，也就是前一个工作目录。
-</code></pre>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><pre class=" language-shell"><code class="language-shell">cd    # 进入用户主目录；
-cd /  # 进入根目录
+-  当前工作目录将被切换到环境变量OLDPWD所表示的目录，也就是前一个工作目录。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd    # 进入用户主目录；
+cd &#x2F;  # 进入根目录
 cd ~  # 进入用户主目录；
-cd ..  # 返回上级目录（若当前目录为“/“，则执行完后还在“/"；".."为上级目录的意思）；
-cd ../..  # 返回上两级目录；
-cd !$  # 把上个命令的参数作为cd参数使用。
-</code></pre>
+cd ..  # 返回上级目录（若当前目录为“&#x2F;“，则执行完后还在“&#x2F;&quot;；&quot;..&quot;为上级目录的意思）；
+cd ..&#x2F;..  # 返回上两级目录；
+cd !$  # 把上个命令的参数作为cd参数使用。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>  关于切换到上一个工作目录的说明</p>
-<pre class=" language-shell"><code class="language-shell">cd -
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd -
 # 命令会首先显示要切换到的目标目录，然后再进入。
 cd $&#123;OLDPWD&#125;
-# 命令会直接切换到上一个工作目录。
-</code></pre>
+# 命令会直接切换到上一个工作目录。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>  关于<code>CDPATH</code></p>
-<pre class=" language-shell"><code class="language-shell"># 设置桌面文件夹作为CDPATH的值。
-CDPATH='~/Desktop'
-# 假设我们接下来要演示涉及到的路径~和~/Desktop下没有test3文件夹，现在新建它们。
-mkdir ~/test3
-mkdir ~/Desktop/test3
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 设置桌面文件夹作为CDPATH的值。
+CDPATH&#x3D;&#39;~&#x2F;Desktop&#39;
+# 假设我们接下来要演示涉及到的路径~和~&#x2F;Desktop下没有test3文件夹，现在新建它们。
+mkdir ~&#x2F;test3
+mkdir ~&#x2F;Desktop&#x2F;test3
 # 进入~目录。
 cd ~
 # 进入test3目录。
 cd test3
-# 执行后显示~/Desktop/test3并进入该目录，而不是~目录的test3目录。
-# 如果CDPATH存在值，那么优先在CDPATH中查找并进入第一个匹配成功的，如果全部失败那么最后尝试当前目录。
-</code></pre>
+# 执行后显示~&#x2F;Desktop&#x2F;test3并进入该目录，而不是~目录的test3目录。
+# 如果CDPATH存在值，那么优先在CDPATH中查找并进入第一个匹配成功的，如果全部失败那么最后尝试当前目录。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>  关于<code>cdable_vars</code></p>
-<pre class=" language-shell"><code class="language-shell"># 打开选项。
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 打开选项。
 shopt -s cdable_vars
 # 假设当前路径以及CDPATH没有名为new_var的目录。
-new_var='~/Desktop'
+new_var&#x3D;&#39;~&#x2F;Desktop&#39;
 # 尝试进入。
 cd new_var
 # 关闭选项。
-shopt -u cdable_vars
-</code></pre>
-</li>
+shopt -u cdable_vars<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="6-Ctrl-C"><a href="#6-Ctrl-C" class="headerlink" title="6.Ctrl + C"></a>6.Ctrl + C</h3><ul>
 <li><p><code>Ctrl + C</code> —— 强制终止当前命令</p>
 <p>  显示状态：<code>^C</code></p>
 </li>
 <li><p>如何复制、粘贴？</p>
-<pre><code>Ctrl + Shift + C
-Ctrl + Shift + V
-</code></pre>
+  <pre class="line-numbers language-none"><code class="language-none">Ctrl + Shift + C
+Ctrl + Shift + V<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>  Linux 终端内无法撤销”Ctrl+Z”</p>
 </li>
 </ul>
 <h3 id="7-ls进阶用法：文件夹下各种匹配过滤符号"><a href="#7-ls进阶用法：文件夹下各种匹配过滤符号" class="headerlink" title="7.ls进阶用法：文件夹下各种匹配过滤符号"></a>7.ls进阶用法：文件夹下各种匹配过滤符号</h3><ul>
 <li><p>ls 命令补充</p>
-<pre class=" language-shell"><code class="language-shell"># ls + 路径
-ls .        # 查找当前目录
-ls ~        # 查找用户目录
-ls /        # 查找根目录
-ls ./Documents/doc        # 查找路径对应的目录
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># ls + 路径
+ls .		# 查找当前目录
+ls ~		# 查找用户目录
+ls &#x2F;		# 查找根目录
+ls .&#x2F;Documents&#x2F;doc		# 查找路径对应的目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <ul>
 <li><p><strong>文件夹下各种匹配过滤符号</strong></p>
 <p>  直接上例子</p>
-<pre class=" language-shell"><code class="language-shell"># 文件扩展通配符
-lee@lee-virtual-machine:~$ ls -l fhs-2.3_*.pdf        # '*'用于多个字符
-lee@lee-virtual-machine:~$ ls -l fhs-2.3_copy?.pdf    # '?'用于单个字符
-lee@lee-virtual-machine:~$ ls -l *.pdf                  # 查找指定文件类型的文件
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 文件扩展通配符
+lee@lee-virtual-machine:~$ ls -l fhs-2.3_*.pdf        # &#39;*&#39;用于多个字符
+lee@lee-virtual-machine:~$ ls -l fhs-2.3_copy?.pdf    # &#39;?&#39;用于单个字符
+lee@lee-virtual-machine:~$ ls -l *.pdf				  # 查找指定文件类型的文件
 
 # 元字符通配符
-lee@lee-virtual-machine:~$ ls -l f[a-x]ck.txt          # '[]'指定该字符范围
-</code></pre>
+lee@lee-virtual-machine:~$ ls -l f[a-x]ck.txt		  # &#39;[]&#39;指定该字符范围<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
   <img src="/frank-lee/2021/08/13/Linux/image-20210703081930187.png" class="">
 
 <blockquote>
@@ -894,51 +879,47 @@ lee@lee-virtual-machine:~$ ls -l f[a-x]ck.txt          # '[]'指定该字符范�
 </blockquote>
 <h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><p>  显示目录内容列表</p>
 <h4 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h4><p>  <strong>ls命令</strong> 就是list的缩写，用来显示目标列表，在Linux中是使用率较高的命令。ls命令的输出信息可以进行彩色加亮显示，以分区不同类型的文件。</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre class=" language-shell"><code class="language-shell"> ls [选项] [文件名...]
-    [-1abcdfgiklmnopqrstuxABCDFGLNQRSUX] [-w cols] [-T cols] [-I pattern] [--full-time] 
-    [--format=&#123;long,verbose,commas,across,vertical,single-col‐umn&#125;] 
-    [--sort=&#123;none,time,size,extension&#125;] [--time=&#123;atime,access,use,ctime,status&#125;] 
-    [--color[=&#123;none,auto,always&#125;]] [--help] [--version] [--]
-</code></pre>
-<h4 id="选项-1"><a href="#选项-1" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell"> -C     # 多列输出，纵向排序。
- -F     # 每个目录名加 "/" 后缀，每个 FIFO 名加 "|" 后缀， 每个可运行名加“ * ”后缀。
- -R     # 递归列出遇到的子目录。
- -a     # 列出所有文件，包括以 "." 开头的隐含文件。
- -d     # 将目录名像其它文件一样列出，而不是列出它们的内容。
- -r     # 逆序排列。
- -t     # 按时间信息排序。
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls [选项] [文件名...]
+   [-1abcdfgiklmnopqrstuxABCDFGLNQRSUX] [-w cols] [-T cols] [-I pattern] [--full-time] 
+   [--format&#x3D;&#123;long,verbose,commas,across,vertical,single-col‐umn&#125;] 
+   [--sort&#x3D;&#123;none,time,size,extension&#125;] [--time&#x3D;&#123;atime,access,use,ctime,status&#125;] 
+   [--color[&#x3D;&#123;none,auto,always&#125;]] [--help] [--version] [--]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
- -a, --all # 列出目录中所有文件，包括以“.”开头的文件。
- -b, --escape # 把文件名中不可输出的字符用反斜杠加字符编号(就像在 C 语言里一样)的形式列出。
- -d, --directory
-       # 将目录名像其它文件一样列出，而不是列出它们的内容。
-       
- -l, --format=long, --format=verbose
-       # 输出的信息从左到右依次包括文件名、文件类型、权限、硬链接数、所有者名、组名、大小（byte）
-       # 、及时间信息（如未指明是其它时间即指修改时间）。对于6个月以上的文件或超出未来
-       # 1小时的文件，时间信息中的时分将被年代取代。
-       # 每个目录列出前，有一行“总块数”显示目录下全部文件所占的磁盘空间。块默认是1024字节；
-       # 如果设置了 POSIXLY_CORRECT 的环境变量，除非用“-k”选项，则默认块大小是 512 字节。
-       # 每一个硬链接都计入总块数（因此可能重复计数），这无 疑是个缺点。
-</code></pre>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><pre class=" language-shell"><code class="language-shell"> $ ls       # 仅列出当前目录可见文件
- $ ls -l    # 列出当前目录可见文件详细信息
- $ ls -hl   # 列出详细信息并以可读大小显示文件大小
- $ ls -al   # 列出所有文件（包括隐藏）的详细信息
- $ ls --human-readable --size -1 -S --classify # 按文件大小排序
- $ du -sh * | sort -h # 按文件大小排序(同上)
-</code></pre>
+<h4 id="选项-1"><a href="#选项-1" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-C     # 多列输出，纵向排序。
+-F     # 每个目录名加 &quot;&#x2F;&quot; 后缀，每个 FIFO 名加 &quot;|&quot; 后缀， 每个可运行名加“ * ”后缀。
+-R     # 递归列出遇到的子目录。
+-a     # 列出所有文件，包括以 &quot;.&quot; 开头的隐含文件。
+-d     # 将目录名像其它文件一样列出，而不是列出它们的内容。
+-r     # 逆序排列。
+-t     # 按时间信息排序。
+    
+-a, --all # 列出目录中所有文件，包括以“.”开头的文件。
+-b, --escape # 把文件名中不可输出的字符用反斜杠加字符编号(就像在 C 语言里一样)的形式列出。
+-d, --directory
+      # 将目录名像其它文件一样列出，而不是列出它们的内容。
+      
+-l, --format&#x3D;long, --format&#x3D;verbose
+      # 输出的信息从左到右依次包括文件名、文件类型、权限、硬链接数、所有者名、组名、大小（byte）
+      # 、及时间信息（如未指明是其它时间即指修改时间）。对于6个月以上的文件或超出未来
+      # 1小时的文件，时间信息中的时分将被年代取代。
+      # 每个目录列出前，有一行“总块数”显示目录下全部文件所占的磁盘空间。块默认是1024字节；
+      # 如果设置了 POSIXLY_CORRECT 的环境变量，除非用“-k”选项，则默认块大小是 512 字节。
+      # 每一个硬链接都计入总块数（因此可能重复计数），这无 疑是个缺点。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ ls       # 仅列出当前目录可见文件
+$ ls -l    # 列出当前目录可见文件详细信息
+$ ls -hl   # 列出详细信息并以可读大小显示文件大小
+$ ls -al   # 列出所有文件（包括隐藏）的详细信息
+$ ls --human-readable --size -1 -S --classify # 按文件大小排序
+$ du -sh * | sort -h # 按文件大小排序(同上)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>  显示当前目录下包括影藏文件在内的所有文件列表</p>
-<pre class=" language-shell"><code class="language-shell"> [root@localhost ~]# ls -a
- .   anaconda-ks.cfg  .bash_logout   .bashrc  install.log         .mysql_history  satools  .tcshrc   .vimrc
- ..  .bash_history    .bash_profile  .cshrc   install.log.syslog  .rnd            .ssh     .viminfo
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@localhost ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  install.log         .mysql_history  satools  .tcshrc   .vimrc
+..  .bash_history    .bash_profile  .cshrc   install.log.syslog  .rnd            .ssh     .viminfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="8-touch命令"><a href="#8-touch命令" class="headerlink" title="8.touch命令"></a>8.touch命令</h3><ul>
 <li><p>组合命令</p>
-<pre class=" language-shell"><code class="language-shell">lee@fuck:~/Documents$ cd ../doc $$ ls -alF
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@fuck:~&#x2F;Documents$ cd ..&#x2F;doc $$ ls -alF<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  &amp;&amp;: 进行命令的组合</p>
 </li>
 <li><p>touch 命令</p>
@@ -946,22 +927,19 @@ lee@lee-virtual-machine:~$ ls -l f[a-x]ck.txt          # '[]'指定该字符范�
 <li>  <strong>更新文件写入时间</strong></li>
 <li>  <strong>创建一个空文件</strong></li>
 </ul>
-<pre class=" language-shell"><code class="language-shell">lee@fuck:~/Documents$ touch 2.txt
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@fuck:~&#x2F;Documents$ touch 2.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>touch 命令详解</p>
 <h4 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h4><p>  创建新的空文件</p>
 <h4 id="补充说明-1"><a href="#补充说明-1" class="headerlink" title="补充说明"></a>补充说明</h4><p>  <strong>touch命令</strong> 有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。</p>
-<h4 id="选项-2"><a href="#选项-2" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-a：或--time=atime或--time=access或--time=use  只更改存取时间；
+<h4 id="选项-2"><a href="#选项-2" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-a：或--time&#x3D;atime或--time&#x3D;access或--time&#x3D;use  只更改存取时间；
 -c：或--no-create  不建立任何文件；
--d：<时间日期> 使用指定的日期时间，而非现在的时间；
+-d：&lt;时间日期&gt; 使用指定的日期时间，而非现在的时间；
 -f：此参数将忽略不予处理，仅负责解决BSD版本touch指令的兼容性问题；
--m：或--time=mtime或--time=modify  只更该变动时间；
--r：<参考文件或目录>  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；
--t：<日期时间>  使用指定的日期时间，而非现在的时间；
+-m：或--time&#x3D;mtime或--time&#x3D;modify  只更该变动时间；
+-r：&lt;参考文件或目录&gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；
+-t：&lt;日期时间&gt;  使用指定的日期时间，而非现在的时间；
 --help：在线帮助；
---version：显示版本信息。
-</code></pre>
+--version：显示版本信息。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <h3 id="9-cp命令"><a href="#9-cp命令" class="headerlink" title="9.cp命令"></a>9.cp命令</h3><ul>
@@ -972,17 +950,15 @@ lee@lee-virtual-machine:~$ ls -l f[a-x]ck.txt          # '[]'指定该字符范�
 <li><p>  <strong>使用源文件覆盖目标文件</strong>，没有目标文件则创建并覆盖</p>
 </li>
 <li><p>因此，先询问用户是否overwrite：添加参数<code>-i</code>，即<code>cp -i 源文件 目标文件</code>，此时需要回答<code>y/n</code></p>
-<pre class=" language-shell"><code class="language-shell">lee@fuck:~/Documents$ cp 1.txt 2.txt
-lee@fuck:~/Documents$ cp -i 1.txt 2.txt
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@fuck:~&#x2F;Documents$ cp 1.txt 2.txt
+lee@fuck:~&#x2F;Documents$ cp -i 1.txt 2.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li><p>复制目录及文件</p>
-<pre class=" language-shell"><code class="language-shell">lee@fuck:~/Documents$ cp ~/Documents/doc/* ~/Downloads         # 仅复制指定目录下的所有文件
-lee@fuck:~/Documents$ cp -r ~/Documents/doc ~/Downloads      # 递归处理指定目录下的所有文件与子目录
-lee@fuck:~/Documents$ cp 1.txt ~/Downloads    
-lee@fuck:~/Documents$ cp -i 1.txt ../         # 使用相对路径，复制到上一层目录 
-lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@fuck:~&#x2F;Documents$ cp ~&#x2F;Documents&#x2F;doc&#x2F;* ~&#x2F;Downloads    	 # 仅复制指定目录下的所有文件
+lee@fuck:~&#x2F;Documents$ cp -r ~&#x2F;Documents&#x2F;doc ~&#x2F;Downloads      # 递归处理指定目录下的所有文件与子目录
+lee@fuck:~&#x2F;Documents$ cp 1.txt ~&#x2F;Downloads    
+lee@fuck:~&#x2F;Documents$ cp -i 1.txt ..&#x2F;         # 使用相对路径，复制到上一层目录 
+lee@fuck:~&#x2F;Documents$ cp ..&#x2F;pdf&#x2F;* .			  # .代表当前目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>  <strong>练习</strong></p>
   <img src="/frank-lee/2021/08/13/Linux/image-20210703110308742.png" class="">
 
@@ -995,21 +971,21 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 <li><p>cp 命令详解</p>
 <h4 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h4><p>  将源文件或目录复制到目标文件或目录中</p>
 <h4 id="补充说明-2"><a href="#补充说明-2" class="headerlink" title="补充说明"></a>补充说明</h4><p>  <strong>cp命令</strong> 用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。</p>
-<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><pre class=" language-shell"><code class="language-shell">cp(选项)(参数)
-</code></pre>
-<h4 id="选项-3"><a href="#选项-3" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-a：此参数的效果和同时指定"-dpR"参数相同；
+<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cp(选项)(参数)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="选项-3"><a href="#选项-3" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-a：此参数的效果和同时指定&quot;-dpR&quot;参数相同；
 -d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；
 -f：强行复制文件或目录，不论目标文件或目录是否已存在；
 -i：覆盖既有文件之前先询问用户；
 -l：对源文件建立硬连接，而非复制文件；
 -p：保留源文件或目录的属性；
--R/r：递归处理，将指定目录下的所有文件与子目录一并处理；
+-R&#x2F;r：递归处理，将指定目录下的所有文件与子目录一并处理；
 -s：对源文件建立符号连接，而非复制文件；
 -u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；
 -S：在备份文件时，用指定的后缀“SUFFIX”代替文件的默认后缀；
 -b：覆盖已存在的文件目标前将目标文件备份；
--v：详细显示命令执行的操作。
-</code></pre>
+-v：详细显示命令执行的操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h4><ul>
 <li>  源文件：制定源文件列表。默认情况下，cp命令不能复制目录，如果要复制目录，则必须使用<code>-R</code>选项；</li>
 <li>  目标文件：指定目标文件。当“源文件”为多个文件时，要求“目标文件”为指定的目录。</li>
@@ -1059,12 +1035,12 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 <ul>
 <li>  用来为文件创建链接</li>
 </ul>
-<pre class=" language-shell"><code class="language-shell">ln [选项]... [-T] 目标 链接名    (第一种格式)
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ln [选项]... [-T] 目标 链接名    (第一种格式)
 　或：ln [选项]... 目标        (第二种格式)
 　或：ln [选项]... 目标... 目录    (第三种格式)
-　或：ln [选项]... -t 目录 目标...    (第四种格式)
-</code></pre>
-<pre class=" language-shell"><code class="language-shell">    --backup[=CONTROL]  为每个已存在的目标文件创建备份文件
+　或：ln [选项]... -t 目录 目标...    (第四种格式)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">    --backup[&#x3D;CONTROL]  为每个已存在的目标文件创建备份文件
 -b        类似--backup，但不接受任何参数
 -d, -F, --directory   创建指向目录的硬链接(只适用于超级用户)
 -f, --force     强行删除任何已存在的目标文件
@@ -1074,14 +1050,12 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 -P, --physical              直接将硬链接到符号链接
 -r, --relative              创建相对于链接位置的符号链接
 -s, --symbolic              对源文件建立符号链接，而非硬链接；
--S, --suffix=SUFFIX         用"-b"参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，预设的备份字符串是符号“~”，用户可通过“-S”参数来改变它；
--t, --target-directory=DIRECTORY  指定要在其中创建链接的DIRECTORY
+-S, --suffix&#x3D;SUFFIX         用&quot;-b&quot;参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，预设的备份字符串是符号“~”，用户可通过“-S”参数来改变它；
+-t, --target-directory&#x3D;DIRECTORY  指定要在其中创建链接的DIRECTORY
 -T, --no-target-directory   将“LINK_NAME”视为常规文件
 -v, --verbose               打印每个链接文件的名称
     --help    显示此帮助信息并退出
-    --version   显示版本信息并退出
-</code></pre>
-</li>
+    --version   显示版本信息并退出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>实战</p>
   <img src="/frank-lee/2021/08/13/Linux/image-20210703223745034.png" class="">
 
@@ -1106,8 +1080,8 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 </ul>
 <h3 id="13-rm——最佳年度删库跑路"><a href="#13-rm——最佳年度删库跑路" class="headerlink" title="13.rm——最佳年度删库跑路"></a>13.rm——最佳年度删库跑路</h3><ul>
 <li><p><strong>警告</strong>：非常危险，直接进局</p>
-<pre class=" language-shell"><code class="language-shell">sudo rm -rf /*
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo rm -rf &#x2F;*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  直接删除，无法恢复                        </p>
 </li>
 <li><p>  <code>rm</code> —— remove files </p>
@@ -1115,15 +1089,15 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 <li><p>  提醒用户，使用 <code>rm -i 文件(目录)</code> </p>
 </li>
 <li><h4 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h4><p>  用于删除给定的文件和目录</p>
-<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><pre class=" language-shell"><code class="language-shell">rm (选项)(参数)
-</code></pre>
-<h4 id="选项-4"><a href="#选项-4" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；
+<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rm (选项)(参数)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="选项-4"><a href="#选项-4" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；
 -f：强制删除文件或目录；
 -i：删除已有文件或目录之前先询问用户；
 -r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；
 --preserve-root：不对根目录进行递归操作；
--v：显示指令的详细执行过程。
-</code></pre>
+-v：显示指令的详细执行过程。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h4><p>  文件：指定被删除的文件列表，如果参数中含有目录，则必须加上<code>-r</code>或者<code>-R</code>选项。</p>
 </li>
 </ul>
@@ -1135,9 +1109,7 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
   <img src="/frank-lee/2021/08/13/Linux/image-20210710120110213-16288407801242.png" class=""></li>
 <li><p>创建多级目录：<code>mkdir -p 目录名</code></p>
 <p>  eg：</p>
-<pre class=" language-shell"><code class="language-shell">lee@fuck:~/Project/java$ mkdir -p js/src/util
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lee@fuck:~&#x2F;Project&#x2F;java$ mkdir -p js&#x2F;src&#x2F;util<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>删除目录：</p>
 <ul>
 <li>  <code>rmdir</code> 只能删除空目录，不好用</li>
@@ -1150,14 +1122,14 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 </li>
 <li><h4 id="file"><a href="#file" class="headerlink" title="file"></a>file</h4><p>  用来探测给定文件的类型</p>
 <h4 id="补充说明-3"><a href="#补充说明-3" class="headerlink" title="补充说明"></a>补充说明</h4><p>  <strong>file命令</strong> 用来探测给定文件的类型。file命令对文件的检查分为文件系统、魔法幻数检查和语言检查3个过程。</p>
-<h4 id="选项-5"><a href="#选项-5" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-b：列出辨识结果时，不显示文件名称；
+<h4 id="选项-5"><a href="#选项-5" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-b：列出辨识结果时，不显示文件名称；
 -c：详细显示指令执行过程，便于排错或分析程序执行的情形；
--f<名称文件>：指定名称文件，其内容有一个或多个文件名称时，让file依序辨识这些文件，格式为每列一个文件名称；
+-f&lt;名称文件&gt;：指定名称文件，其内容有一个或多个文件名称时，让file依序辨识这些文件，格式为每列一个文件名称；
 -L：直接显示符号连接所指向的文件类别；
--m<魔法数字文件>：指定魔法数字文件；
+-m&lt;魔法数字文件&gt;：指定魔法数字文件；
 -v：显示版本信息；
--z：尝试去解读压缩文件的内容。
-</code></pre>
+-z：尝试去解读压缩文件的内容。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="参数-3"><a href="#参数-3" class="headerlink" title="参数"></a>参数</h4><p>  文件：要确定类型的文件列表，多个文件之间使用空格分开，可以使用shell通配符匹配多个文件。</p>
 </li>
 </ul>
@@ -1173,23 +1145,21 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 <li>  将多个文件的内容进行连接并打印到标准输出。</li>
 <li>  显示文件内容中的不可见字符（控制字符、换行符、制表符等）。</li>
 </ul>
-<h4 id="选项-6"><a href="#选项-6" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">长选项与短选项等价
+<h4 id="选项-6"><a href="#选项-6" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">长选项与短选项等价
 
--A, --show-all           等价于"-vET"组合选项。
--b, --number-nonblank    只对非空行编号，从1开始编号，覆盖"-n"选项。
--e                       等价于"-vE"组合选项。
--E, --show-ends          在每行的结尾显示'$'字符。
+-A, --show-all           等价于&quot;-vET&quot;组合选项。
+-b, --number-nonblank    只对非空行编号，从1开始编号，覆盖&quot;-n&quot;选项。
+-e                       等价于&quot;-vE&quot;组合选项。
+-E, --show-ends          在每行的结尾显示&#39;$&#39;字符。
 -n, --number             对所有行编号，从1开始编号。
 -s, --squeeze-blank      压缩连续的空行到一行。
--t                       等价于"-vT"组合选项。
--T, --show-tabs          使用"^I"表示TAB（制表符）。
+-t                       等价于&quot;-vT&quot;组合选项。
+-T, --show-tabs          使用&quot;^I&quot;表示TAB（制表符）。
 -u                       POSIX兼容性选项，无意义。
--v, --show-nonprinting   使用"^"和"M-"符号显示控制字符，除了LFD（line feed，即换行符'\n'）和TAB（制表符）。
+-v, --show-nonprinting   使用&quot;^&quot;和&quot;M-&quot;符号显示控制字符，除了LFD（line feed，即换行符&#39;\n&#39;）和TAB（制表符）。
 
 --help                   显示帮助信息并退出。
---version                显示版本信息并退出。
-</code></pre>
-</li>
+--version                显示版本信息并退出。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p><code>more</code> —— 显示文件内容，每次一屏（也不常用）</p>
@@ -1243,25 +1213,23 @@ lee@fuck:~/Documents$ cp ../pdf/* .              # .代表当前目录
 <li><p>  <strong>报告当前系统的进程状态</strong></p>
 </li>
 <li><p>常用实例：</p>
-<pre class=" language-shell"><code class="language-shell">ps axo pid,comm,pcpu # 查看进程的PID、名称以及CPU 占用率
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ps axo pid,comm,pcpu # 查看进程的PID、名称以及CPU 占用率
 ps aux | sort -rnk 4 # 按内存资源的使用量对进程进行排序
 ps aux | sort -nk 3  # 按 CPU 资源的使用量对进程进行排序
 ps -A # 显示所有进程信息
 ps -u root # 显示指定用户信息
 ps -efL # 查看线程数
-ps -e -o "%C : %p :%z : %a"|sort -k5 -nr # 查看进程并按内存使用大小排列
+ps -e -o &quot;%C : %p :%z : %a&quot;|sort -k5 -nr # 查看进程并按内存使用大小排列
 ps -ef # 显示所有进程信息，连同命令行
 ps -ef | grep ssh # ps 与grep 常用组合用法，查找特定进程
 ps -C nginx # 通过名字或命令搜索进程
-ps aux --sort=-pcpu,+pmem # CPU或者内存进行排序,-降序，+升序
+ps aux --sort&#x3D;-pcpu,+pmem # CPU或者内存进行排序,-降序，+升序
 ps -f --forest -C nginx # 用树的风格显示进程的层次关系
 ps -o pid,uname,comm -C nginx # 显示一个父进程的子进程
-ps -e -o pid,uname=USERNAME,pcpu=CPU_USAGE,pmem,comm # 重定义标签
+ps -e -o pid,uname&#x3D;USERNAME,pcpu&#x3D;CPU_USAGE,pmem,comm # 重定义标签
 ps -e -o pid,comm,etime # 显示进程运行的时间
 ps -aux | grep named # 查看named进程详细信息
-ps -o command -p 91730 | sed -n 2p # 通过进程id获取服务名称
-</code></pre>
-</li>
+ps -o command -p 91730 | sed -n 2p # 通过进程id获取服务名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>top 命令</p>
@@ -1275,9 +1243,9 @@ ps -o command -p 91730 | sed -n 2p # 通过进程id获取服务名称
 </li>
 <li><p>kill 详解</p>
 <h4 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h4><p>  发送信号到进程。</p>
-<h4 id="内建命令"><a href="#内建命令" class="headerlink" title="内建命令"></a>内建命令</h4><h5 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h5><pre class=" language-shell"><code class="language-shell">kill [-s sigspec | -n signum | -sigspec] pid | jobspec ...
-kill -l [sigspec]
-</code></pre>
+<h4 id="内建命令"><a href="#内建命令" class="headerlink" title="内建命令"></a>内建命令</h4><h5 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">kill [-s sigspec | -n signum | -sigspec] pid | jobspec ...
+kill -l [sigspec]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：pid：进程ID，jobspec：作业标识符</p>
 </blockquote>
@@ -1285,12 +1253,12 @@ kill -l [sigspec]
 <li>  发送信号到作业或进程（可以为多个）。</li>
 <li>  列出信号。</li>
 </ul>
-<h5 id="选项-7"><a href="#选项-7" class="headerlink" title="选项"></a>选项</h5><pre class=" language-shell"><code class="language-shell">-s sig    信号名称。
+<h5 id="选项-7"><a href="#选项-7" class="headerlink" title="选项"></a>选项</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s sig    信号名称。
 -n sig    信号名称对应的数字。
 -l        列出信号名称。如果在该选项后提供了数字那么假设它是信号名称对应的数字。
--L        等价于-l选项。
-</code></pre>
-<h5 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h5><pre class=" language-shell"><code class="language-shell">[user2@pc] kill -l 9
+-L        等价于-l选项。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[user2@pc] kill -l 9
 KILL
 
 # 列出所有信号名称：
@@ -1320,33 +1288,33 @@ INT     2    中断（同 Ctrl + C）
 QUIT    3    退出（同 Ctrl + \）
 KILL    9    强制终止
 TERM   15    终止
-CONT   18    继续（与STOP相反，fg/bg命令）
+CONT   18    继续（与STOP相反，fg&#x2F;bg命令）
 STOP   19    暂停（同 Ctrl + Z）
 # 以下发送KILL信号的形式等价。当然还有更多的等价形式，在此不一一列举了。
 [user2@pc] kill -s SIGKILL PID
 [user2@pc] kill -s KILL PID
 [user2@pc] kill -n 9 PID
-[user2@pc] kill -9 PID
-</code></pre>
+[user2@pc] kill -9 PID<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ol>
 <li> <code>bash</code>的作业控制命令包括<code>bg fg kill wait disown suspend</code>。</li>
 <li> 该命令是bash内建命令，相关的帮助信息请查看<code>help</code>命令。</li>
 </ol>
-<h4 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h4><h5 id="概要-1"><a href="#概要-1" class="headerlink" title="概要"></a>概要</h5><pre class=" language-shell"><code class="language-shell">kill [-signal|-s signal|-p] [-q value] [-a] [--] pid|name...
-kill -l [number] | -L
-</code></pre>
-<h5 id="选项-8"><a href="#选项-8" class="headerlink" title="选项"></a>选项</h5><pre class=" language-shell"><code class="language-shell">-s, --signal signal    要发送的信号，可能是信号名称或信号对应的数字。
--l, --list [number]    打印信号名称或转换给定数字到信号名称。信号名称可参考文件（/usr/include/linux/signal.h）。
--L, --table            和'-l'选项类似，但是输出信号名称以及信号对应的数字。
+<h4 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h4><h5 id="概要-1"><a href="#概要-1" class="headerlink" title="概要"></a>概要</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">kill [-signal|-s signal|-p] [-q value] [-a] [--] pid|name...
+kill -l [number] | -L<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h5 id="选项-8"><a href="#选项-8" class="headerlink" title="选项"></a>选项</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s, --signal signal    要发送的信号，可能是信号名称或信号对应的数字。
+-l, --list [number]    打印信号名称或转换给定数字到信号名称。信号名称可参考文件（&#x2F;usr&#x2F;include&#x2F;linux&#x2F;signal.h）。
+-L, --table            和&#39;-l&#39;选项类似，但是输出信号名称以及信号对应的数字。
 -a, --all              不要限制“命令名到pid”的转换为具有与当前进程相同的UID的进程。
--p, --pid              打印目标进程的PID而不发送信号。
-</code></pre>
-<h5 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h5><pre class=" language-shell"><code class="language-shell">> sleep 20 &
+-p, --pid              打印目标进程的PID而不发送信号。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; sleep 20 &amp;
 
 # 列出对应的PID。
-> kill -p sleep
-23021
-</code></pre>
+&gt; kill -p sleep
+23021<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h5><ol>
 <li> 该命令是<code>GNU coreutils</code>包中的命令，相关的帮助信息请查看<code>man -s 1 kill</code>或<code>info coreutils &#39;kill invocation&#39;</code>。</li>
 <li> 启动或关闭内建命令请查看<code>enable</code>命令，关于同名优先级的问题请查看<code>builtin</code>命令的例子部分的相关讨论。</li>
@@ -1366,13 +1334,11 @@ kill -l [number] | -L
 <h4 id="选听——安卓设备挂载"><a href="#选听——安卓设备挂载" class="headerlink" title="选听——安卓设备挂载"></a>选听——安卓设备挂载</h4><p>通过实验，挂载的实质是：将一个分区挂载到一个目录上</p>
 <h3 id="4-mount命令"><a href="#4-mount命令" class="headerlink" title="4.mount命令"></a>4.mount命令</h3><ul>
 <li><p><code>mount</code>：用于挂载Linux系统外的文件</p>
-<pre class=" language-shell"><code class="language-shell">mount /dev/sdc1 /mnt
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">mount &#x2F;dev&#x2F;sdc1 &#x2F;mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p><code>umount</code>：用于卸载已经加载的文件系统</p>
-<pre class=" language-shell"><code class="language-shell">umount /mnt
-umount /media/lee/USB
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">umount &#x2F;mnt
+umount &#x2F;media&#x2F;lee&#x2F;USB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：<code>/mnt</code> 是一个通用挂载点，但这里不允许写入</p>
 </blockquote>
@@ -1381,8 +1347,8 @@ umount /media/lee/USB
 <h3 id="5-df和du"><a href="#5-df和du" class="headerlink" title="5.df和du"></a>5.df和du</h3><h4 id="df"><a href="#df" class="headerlink" title="df"></a>df</h4><ul>
 <li><p>  用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。</p>
 </li>
-<li><h4 id="选项-9"><a href="#选项-9" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-a或--all：包含全部的文件系统；
---block-size=<区块大小>：以指定的区块大小来显示区块数目；
+<li><h4 id="选项-9"><a href="#选项-9" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-a或--all：包含全部的文件系统；
+--block-size&#x3D;&lt;区块大小&gt;：以指定的区块大小来显示区块数目；
 -h或--human-readable：以可读性较高的方式来显示信息；
 -H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；
 -i或--inodes：显示inode的信息；
@@ -1390,18 +1356,16 @@ umount /media/lee/USB
 -l或--local：仅显示本地端的文件系统；
 -m或--megabytes：指定区块大小为1048576字节；
 -P或--portability：使用POSIX的输出格式；
--t<文件系统类型>或--type=<文件系统类型>：仅显示指定文件系统类型的磁盘信息；
+-t&lt;文件系统类型&gt;或--type&#x3D;&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；
 -T或--print-type：显示文件系统的类型；
--x<文件系统类型>或--exclude-type=<文件系统类型>：不要显示指定文件系统类型的磁盘信息；
-</code></pre>
-</li>
+-x&lt;文件系统类型&gt;或--exclude-type&#x3D;&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>  <img src="/frank-lee/2021/08/13/Linux/image-20210731214322879.png" class=""></li>
 </ul>
 <h4 id="du"><a href="#du" class="headerlink" title="du"></a>du</h4><ul>
 <li><p>  显示每个文件和目录的磁盘使用空间</p>
 </li>
-<li><h4 id="选项-10"><a href="#选项-10" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-a, --all                              显示目录中个别文件的大小。
--B, --block-size=大小                  使用指定字节数的块
+<li><h4 id="选项-10"><a href="#选项-10" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-a, --all                              显示目录中个别文件的大小。
+-B, --block-size&#x3D;大小                  使用指定字节数的块
 -b, --bytes                            显示目录或文件大小时，以byte为单位。
 -c, --total                            除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。
 -D, --dereference-args                 显示指定符号链接的源文件大小。
@@ -1410,16 +1374,16 @@ umount /media/lee/USB
 -k, --kilobytes                        以KB(1024bytes)为单位输出。
 -l, --count-links                      重复计算硬件链接的文件。
 -m, --megabytes                        以MB为单位输出。
--L<符号链接>, --dereference<符号链接>  显示选项中所指定符号链接的源文件大小。
+-L&lt;符号链接&gt;, --dereference&lt;符号链接&gt;  显示选项中所指定符号链接的源文件大小。
 -P, --no-dereference                   不跟随任何符号链接(默认)
 -0, --null                             将每个空行视作0 字节而非换行符
 -S, --separate-dirs                    显示个别目录的大小时，并不含其子目录的大小。
 -s, --summarize                        仅显示总计，只列出最后加总的值。
 -x, --one-file-xystem                  以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。
--X<文件>, --exclude-from=<文件>        在<文件>指定目录或文件。
-</code></pre>
+-X&lt;文件&gt;, --exclude-from&#x3D;&lt;文件&gt;        在&lt;文件&gt;指定目录或文件。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h4><p>  文件从大到小排序</p>
-<pre class=" language-shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~/git-work/linux-command$ du -sh * |sort -rh
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~&#x2F;git-work&#x2F;linux-command$ du -sh * |sort -rh
 2.9M    command
 1.9M    assets
 148K    template
@@ -1429,33 +1393,31 @@ umount /media/lee/USB
 16K     README.md
 4.0K    renovate.json
 4.0K    package.json
-4.0K    LICENSE
-</code></pre>
+4.0K    LICENSE<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>  只显示当前目录下子目录的大小。</p>
-<pre class=" language-shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~/git-work/linux-command$ du -sh ./*/
-1.9M    ./assets/
-28K     ./build/
-2.9M    ./command/
-52K     ./dist/
-148K    ./template/
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~&#x2F;git-work&#x2F;linux-command$ du -sh .&#x2F;*&#x2F;
+1.9M    .&#x2F;assets&#x2F;
+28K     .&#x2F;build&#x2F;
+2.9M    .&#x2F;command&#x2F;
+52K     .&#x2F;dist&#x2F;
+148K    .&#x2F;template&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>  查看指定目录下文件所占的空间：</p>
-<pre class=" language-shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~/git-work/linux-command/assets$ du ./*
-144     ./alfred.png
-452     ./chrome-extensions.gif
-4       ./dash-icon.png
-1312    ./Linux.gif
-16      ./qr.png
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~&#x2F;git-work&#x2F;linux-command&#x2F;assets$ du .&#x2F;*
+144     .&#x2F;alfred.png
+452     .&#x2F;chrome-extensions.gif
+4       .&#x2F;dash-icon.png
+1312    .&#x2F;Linux.gif
+16      .&#x2F;qr.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>  只显示总和的大小:</p>
-<pre class=" language-shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~/git-work/linux-command/assets$ du -s .
-1932    .
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~&#x2F;git-work&#x2F;linux-command&#x2F;assets$ du -s .
+1932    .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>  显示总和的大小且易读:</p>
-<pre class=" language-shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~/git-work/linux-command/assets$ du -sh .
-1.9M    .
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ubuntu@VM-0-14-ubuntu:~&#x2F;git-work&#x2F;linux-command&#x2F;assets$ du -sh .
+1.9M    .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="6-sort命令"><a href="#6-sort命令" class="headerlink" title="6.sort命令"></a>6.sort命令</h3><ul>
 <li><p>对文本文件中所有行进行排序。</p>
@@ -1465,7 +1427,7 @@ umount /media/lee/USB
 </ul>
 </li>
 <li><p>排序选项：</p>
-<pre class=" language-shell"><code class="language-shell">-b, --ignore-leading-blanks    忽略开头的空白。
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-b, --ignore-leading-blanks    忽略开头的空白。
 -d, --dictionary-order         仅考虑空白、字母、数字。
 -f, --ignore-case              将小写字母作为大写字母考虑。
 -g, --general-numeric-sort     根据数字排序。
@@ -1474,26 +1436,26 @@ umount /media/lee/USB
 -h, --human-numeric-sort       根据存储容量排序(注意使用大写字母，例如：2K 1G)。
 -n, --numeric-sort             根据数字排序。
 -r, --reverse                  将结果倒序排列。
---sort=WORD                    根据WORD排序，其中: general-numeric 等价于 -g，human-numeric 等价于 -h，month 等价于 -M，numeric 等价于 -n，random 等价于 -R，version 等价于 -V。
+--sort&#x3D;WORD                    根据WORD排序，其中: general-numeric 等价于 -g，human-numeric 等价于 -h，month 等价于 -M，numeric 等价于 -n，random 等价于 -R，version 等价于 -V。
 -V, --version-sort             文本中(版本)数字的自然排序。
 
 # 其他
--k, --key=KEYDEF               通过一个key排序；KEYDEF给出位置和类型。
--t, --field-separator=SEP      使用SEP作为列的分隔符。
--T, --temporary-directory=DIR  使用DIR作为临时目录，而不是 $TMPDIR 或 /tmp；多次使用该选项指定多个临时目录。
-</code></pre>
+-k, --key&#x3D;KEYDEF               通过一个key排序；KEYDEF给出位置和类型。
+-t, --field-separator&#x3D;SEP      使用SEP作为列的分隔符。
+-T, --temporary-directory&#x3D;DIR  使用DIR作为临时目录，而不是 $TMPDIR 或 &#x2F;tmp；多次使用该选项指定多个临时目录。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：关于<code>-g</code>和<code>-n</code>选项的区别：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1255782/whats-the-difference-between-general-numeric-sort-and-numeric-sort-options">stackoverflow</a>，</p>
-<pre><code>‘-g’ ‘--general-numeric-sort’ ‘--sort=general-numeric’ Sort numerically, using the standard C function strtod to convert a prefix of each line to a double-precision floating point number. This allows floating point numbers to be specified in scientific notation, like 1.0e-34 and 10e100. The LC_NUMERIC locale determines the decimal-point character. Do not report overflow, underflow, or conversion errors. Use the following collating sequence: Lines that do not start with numbers (all considered to be equal). NaNs (“Not a Number” values, in IEEE floating point arithmetic) in a consistent but machine-dependent order. Minus infinity. Finite numbers in ascending numeric order (with -0 and +0 equal). Plus infinity.
+  <pre class="line-numbers language-none"><code class="language-none">‘-g’ ‘--general-numeric-sort’ ‘--sort&#x3D;general-numeric’ Sort numerically, using the standard C function strtod to convert a prefix of each line to a double-precision floating point number. This allows floating point numbers to be specified in scientific notation, like 1.0e-34 and 10e100. The LC_NUMERIC locale determines the decimal-point character. Do not report overflow, underflow, or conversion errors. Use the following collating sequence: Lines that do not start with numbers (all considered to be equal). NaNs (“Not a Number” values, in IEEE floating point arithmetic) in a consistent but machine-dependent order. Minus infinity. Finite numbers in ascending numeric order (with -0 and +0 equal). Plus infinity.
 
 Use this option only if there is no alternative; it is much slower than --numeric-sort (-n) and it can lose information when converting to floating point.
 
-‘-n’ ‘--numeric-sort’ ‘--sort=numeric’ Sort numerically. The number begins each line and consists of optional blanks, an optional ‘-’ sign, and zero or more digits possibly separated by thousands separators, optionally followed by a decimal-point character and zero or more digits. An empty number is treated as ‘0’. The LC_NUMERIC locale specifies the decimal-point character and thousands separator. By default a blank is a space or a tab, but the LC_CTYPE locale can change this.
+‘-n’ ‘--numeric-sort’ ‘--sort&#x3D;numeric’ Sort numerically. The number begins each line and consists of optional blanks, an optional ‘-’ sign, and zero or more digits possibly separated by thousands separators, optionally followed by a decimal-point character and zero or more digits. An empty number is treated as ‘0’. The LC_NUMERIC locale specifies the decimal-point character and thousands separator. By default a blank is a space or a tab, but the LC_CTYPE locale can change this.
 
 Comparison is exact; there is no rounding error.
 
-Neither a leading ‘+’ nor exponential notation is recognized. To compare such strings numerically, use the --general-numeric-sort (-g) option.
-</code></pre>
+Neither a leading ‘+’ nor exponential notation is recognized. To compare such strings numerically, use the --general-numeric-sort (-g) option.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>  例子参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/z977690557/p/8945261.html">https://www.cnblogs.com/z977690557/p/8945261.html</a></p>
 </blockquote>
 </li>
@@ -1526,15 +1488,13 @@ Neither a leading ‘+’ nor exponential notation is recognized. To compare suc
 </ul>
 </li>
 <li><p>常用命令</p>
-<pre class=" language-shell"><code class="language-shell">tar -cvf log.tar log2012.log    仅打包，不压缩！
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">tar -cvf log.tar log2012.log    仅打包，不压缩！
 tar -zcvf log.tar.gz log2012.log   打包后，以 gzip 压缩
 tar -jcvf log.tar.bz2 log2012.log  打包后，以 bzip2 压缩
 
 压　缩：tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称
 查　询：tar -jtv -f filename.tar.bz2
-解压缩：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录
-</code></pre>
-</li>
+解压缩：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="9-实战：server上安装vmwaretools"><a href="#9-实战：server上安装vmwaretools" class="headerlink" title="9.实战：server上安装vmwaretools"></a>9.实战：server上安装vmwaretools</h3><img src="/frank-lee/2021/08/13/Linux/image-20210731224433011.png" class="">
 
@@ -1567,10 +1527,10 @@ tar -jcvf log.tar.bz2 log2012.log  打包后，以 bzip2 压缩
 </blockquote>
 <h3 id="sleep和jobs"><a href="#sleep和jobs" class="headerlink" title="sleep和jobs"></a>sleep和jobs</h3><h4 id="sleep和jobs-1"><a href="#sleep和jobs-1" class="headerlink" title="sleep和jobs"></a>sleep和jobs</h4><ul>
 <li><p><code>sleep</code> —— delay for a specified amount of time（默认单位：s）</p>
-<pre class=" language-shell"><code class="language-shell">sleep 100
-</code></pre>
-<pre class=" language-shell"><code class="language-shell">sleep 100&
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sleep 100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sleep 100&amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：’&amp;’表示后台执行</p>
 </blockquote>
@@ -1584,8 +1544,8 @@ tar -jcvf log.tar.bz2 log2012.log  打包后，以 bzip2 压缩
 <img src="/frank-lee/2021/08/13/Linux/image-20210804171759000.png" class="">
 
 <h4 id="后台执行符-amp"><a href="#后台执行符-amp" class="headerlink" title="后台执行符&amp;"></a>后台执行符<code>&amp;</code></h4><p>后台解压文件并复制到指定目录：</p>
-<pre class=" language-shell"><code class="language-shell">(tar -zxvf ... ; tar -zxvf ...; cp ...)&
-</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">(tar -zxvf ... ; tar -zxvf ...; cp ...)&amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：’&amp;’表示后台执行</p>
 <p>  其他参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13338870/what-does-at-the-end-of-a-linux-command-mean">https://stackoverflow.com/questions/13338870/what-does-at-the-end-of-a-linux-command-mean</a></p>
@@ -1626,27 +1586,27 @@ tar -jcvf log.tar.bz2 log2012.log  打包后，以 bzip2 压缩
 <blockquote>
 <p>  使用符号<code>!</code>执行指定序号的历史命令：<code>!n</code></p>
 </blockquote>
-<h4 id="概要-2"><a href="#概要-2" class="headerlink" title="概要"></a>概要</h4><pre class=" language-shell"><code class="language-shell">history [-c] [-d offset] [n]
+<h4 id="概要-2"><a href="#概要-2" class="headerlink" title="概要"></a>概要</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">history [-c] [-d offset] [n]
 history -anrw [filename]
-history -ps arg [arg...]
-</code></pre>
-<h4 id="选项-11"><a href="#选项-11" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-c           清空历史列表。
+history -ps arg [arg...]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="选项-11"><a href="#选项-11" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-c           清空历史列表。
 -d offset    根据offset删除记录。如果是正数则表示offset位置的记录，如果为负数则表示从结尾向前offset位置的记录。
 -a           将当前终端的历史记录行添加到历史记录文件。
 -n           将尚未从历史文件中读取的历史行追加到当前历史列表中。
 -r           读取历史文件，并将其内容附加到历史列表中。
 -w           将当前历史记录列表附加到历史记录文件中并且附加它们到历史列表中。
 -p           在每个arg上执行历史记录扩展并在标准输出上显示结果，而不将结果存储在历史记录列表中。
--s           将每个arg作为单个条目附加到历史记录列表。
-</code></pre>
+-s           将每个arg作为单个条目附加到历史记录列表。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="参数-4"><a href="#参数-4" class="headerlink" title="参数"></a>参数</h4><p>  n：可选，只列出最近的n条记录。</p>
 <p>  filename：可选，表示历史文件；默认调用顺序为<code>filename</code>、环境变量<code>HISTFILE</code>、<code>~/.bash_history</code>。</p>
 </li>
 <li><p>alias —— 定义或显示别名</p>
 <ul>
 <li><p>语法</p>
-<pre class=" language-shell"><code class="language-shell">alias [-p] [name[=value] ...]
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">alias [-p] [name[&#x3D;value] ...]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <blockquote>
 <p>  -p：显示全部已定义的别名。</p>
 <p>  name（可选）：指定要（定义、修改、显示）的别名。</p>
@@ -1654,7 +1614,7 @@ history -ps arg [arg...]
 </blockquote>
 </li>
 <li><p>实例</p>
-<pre class=" language-shell"><code class="language-shell"># 显示全部已定义的别名
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 显示全部已定义的别名
 alias
 alias -p
 
@@ -1663,10 +1623,8 @@ alias ls
 alias ls grep
 
 # 定义或修改别名的值
-alias ls='ls --color=auto'
-alias ls='ls --color=never' grep='grep --color=never'
-</code></pre>
-</li>
+alias ls&#x3D;&#39;ls --color&#x3D;auto&#39;
+alias ls&#x3D;&#39;ls --color&#x3D;never&#39; grep&#x3D;&#39;grep --color&#x3D;never&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 </ul>
@@ -1703,10 +1661,8 @@ alias ls='ls --color=never' grep='grep --color=never'
 </blockquote>
 </li>
 <li><p>使用<code>$</code>引用全局变量</p>
-<pre class=" language-shell"><code class="language-shell">echo $HOME
-cd $HOME
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">echo $HOME
+cd $HOME<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li><p>  使用<code>set</code>命令查看局部变量</p>
 </li>
 </ul>
@@ -1739,8 +1695,8 @@ cd $HOME
 <li><p>  配置java等开发环境需要配置PATH</p>
 </li>
 <li><p>添加环境变量信息</p>
-<pre class=" language-shell"><code class="language-shell">PATH=$PATH:/home/lee/Project
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">PATH&#x3D;$PATH:&#x2F;home&#x2F;lee&#x2F;Project<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
   <img src="/frank-lee/2021/08/13/Linux/image-20210805224731308.png" class="">
 <blockquote>
 <p>  注：如此配置在退出后重新打开会失效</p>
@@ -1760,8 +1716,8 @@ cd $HOME
 </ul>
 </li>
 <li><p>查看文件</p>
-<pre class=" language-shell"><code class="language-shell">cat /etc/profile
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cat &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
   <img src="/frank-lee/2021/08/13/Linux/image-20210805225615727.png" class="">
 </li>
 <li><p>一个目录 —— 常见的不同发行版中用来配置永久环境变量的目录</p>
@@ -1791,9 +1747,7 @@ cd $HOME
 </ul>
 </li>
 <li><p>软件安装</p>
-<pre class=" language-shell"><code class="language-shell">sudo apt install vim
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt install vim<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h3 id="安装、更新、卸载"><a href="#安装、更新、卸载" class="headerlink" title="安装、更新、卸载"></a>安装、更新、卸载</h3><ul>
 <li><p><code>apt - h</code>查看apt帮助文档</p>
@@ -1814,26 +1768,20 @@ cd $HOME
 <li><p>  备份原软件源文件<code>/etc/apt/sources.list</code>，然后删除（因为要直接添加内容）</p>
 </li>
 <li><p>打开<code>/etc/apt/sources.list</code>并添加以下内容</p>
-<pre><code>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-</code></pre>
-</li>
+  <pre class="line-numbers language-none"><code class="language-none">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-security main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-security main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-updates main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-updates main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-proposed main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-proposed main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-backports main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; focal-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>刷新软件源信息</p>
-<pre class=" language-shell"><code class="language-shell">sudo apt update
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>更新软件，速度明显变快</p>
-<pre class=" language-shell"><code class="language-shell">sudo apt upgrade
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>其他发行版本</p>
@@ -1844,10 +1792,10 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted univer
 <li><p>  key — 仔细阅读别人的<code>README.md</code>，需要依赖</p>
 </li>
 <li><p>例子：<a target="_blank" rel="noopener" href="https://github.com/nvbn/thefuck">https://github.com/nvbn/thefuck</a></p>
-<pre class=" language-shell"><code class="language-shell">sudo apt update
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt update
 sudo apt install python3-dev python3-pip python3-setuptools
-sudo pip3 install thefuck
-</code></pre>
+sudo pip3 install thefuck<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：若pip下载慢，参考：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/652884">https://developer.aliyun.com/article/652884</a></p>
 </blockquote>
@@ -1865,20 +1813,20 @@ sudo pip3 install thefuck
 <li><p>查看有关文件</p>
 <ul>
 <li><p>1.</p>
-<pre class=" language-shell"><code class="language-shell">cat /etc/passwd
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cat &#x2F;etc&#x2F;passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  <code>lee:x:1000:1000:Lee,,,:/home/lee:/bin/bash</code></p>
 <p>  用户名 密码 UID 组ID 备注 用户目录 默认shell</p>
 </li>
 <li><p>2.</p>
-<pre class=" language-shell"><code class="language-shell">sudo cat /etc/shadow
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo cat &#x2F;etc&#x2F;shadow<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  密码存储地，仍加密，需root权限</p>
 <p>  <code>lee:$6$vBYkP36fj7.w2YQB$AVnJhuLMHOPFYspc3FCnoLf0r5S7RXVgQTl.1ZLI8zUovgU2yXF3xH/1Q7s/dLOLQmHev/lROJwvEAydaLbzF1:18709:0:99999:7:::</code></p>
 <blockquote>
 <p>  以下为参考：<a target="_blank" rel="noopener" href="https://linuxize.com/post/etc-shadow-file/">https://linuxize.com/post/etc-shadow-file/</a></p>
 </blockquote>
-<pre><code>mark:$6$.n.:17736:0:99999:7:::
+  <pre class="line-numbers language-none"><code class="language-none">mark:$6$.n.:17736:0:99999:7:::
 [--] [----] [---] - [---] ----
 |      |      |   |   |   |||+-----------&gt; 9. Unused
 |      |      |   |   |   ||+------------&gt; 8. Expiration date
@@ -1888,9 +1836,7 @@ sudo pip3 install thefuck
 |      |      |   +----------------------&gt; 4. Minimum password age
 |      |      +--------------------------&gt; 3. Last password change(since 1,1,1970)
 |      +---------------------------------&gt; 2. Encrypted Password
-+----------------------------------------&gt; 1. Username
-</code></pre>
-</li>
++----------------------------------------&gt; 1. Username<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 </ul>
@@ -1904,10 +1850,8 @@ sudo pip3 install thefuck
 <li><p>自学</p>
 <ul>
 <li><p><code>chpasswd</code> 批量更改密码</p>
-<pre class=" language-shell"><code class="language-shell">#先创建用户密码对应文件，格式为username:password，并且不能有空行，保存成文本文件user.txt，然后执行chpasswd命令
-chpasswd < user.txt
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#先创建用户密码对应文件，格式为username:password，并且不能有空行，保存成文本文件user.txt，然后执行chpasswd命令
+chpasswd &lt; user.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li><p>  <code>chage</code> 修改帐号和密码的有效期限</p>
 </li>
 </ul>
@@ -1917,8 +1861,8 @@ chpasswd < user.txt
 <li><p>  Linux 组 groups –&gt; 目的：共享资源的权限</p>
 </li>
 <li><p>查看group文件</p>
-<pre class=" language-shell"><code class="language-shell">tail /etc/group
-</code></pre>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">tail &#x2F;etc&#x2F;group<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>  Ubuntu为每一个用户创建一个单独的组</p>
   <img src="/frank-lee/2021/08/13/Linux/image-20210808174845478.png" class="">
 
@@ -1943,19 +1887,19 @@ chpasswd < user.txt
 <h3 id="作业：自学chmod命令"><a href="#作业：自学chmod命令" class="headerlink" title="作业：自学chmod命令"></a>作业：自学chmod命令</h3><ul>
 <li><p>chmod — change mode</p>
 <p>  用来变更文件或目录的权限</p>
-<h4 id="概要-3"><a href="#概要-3" class="headerlink" title="概要"></a>概要</h4><pre class=" language-shell"><code class="language-shell">chmod [OPTION]... MODE[,MODE]... FILE...
+<h4 id="概要-3"><a href="#概要-3" class="headerlink" title="概要"></a>概要</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">chmod [OPTION]... MODE[,MODE]... FILE...
 chmod [OPTION]... OCTAL-MODE FILE...
-chmod [OPTION]... --reference=RFILE FILE...
-</code></pre>
+chmod [OPTION]... --reference&#x3D;RFILE FILE...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  mode：八进制数或符号组合。</p>
 <p>  file：指定要更改权限的一到多个文件。</p>
 </blockquote>
-<h4 id="选项-12"><a href="#选项-12" class="headerlink" title="选项"></a>选项</h4><pre class=" language-shell"><code class="language-shell">-c, --changes：当文件的权限更改时输出操作信息。
+<h4 id="选项-12"><a href="#选项-12" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-c, --changes：当文件的权限更改时输出操作信息。
 -f, --silent, --quiet：抑制多数错误消息的输出。
 -v, --verbose：无论文件是否更改了权限，一律输出操作信息。
--R, --recursive：对目录以及目录下的文件递归执行更改权限操作。
-</code></pre>
+-R, --recursive：对目录以及目录下的文件递归执行更改权限操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><blockquote>
 <p>  参考<code>man chmod</code>文档的<code>DESCRIPTION</code>段落得知：</p>
 <ul>
@@ -1974,23 +1918,21 @@ chmod [OPTION]... --reference=RFILE FILE...
 <li>  <code>=</code>符号代表添加目标用户相应的权限，删除未提到的权限。</li>
 </ul>
 </blockquote>
-<pre class=" language-shell"><code class="language-shell"># 添加组用户的写权限。
-chmod g+w ./test.log
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 添加组用户的写权限。
+chmod g+w .&#x2F;test.log
 # 删除其他用户的所有权限。
-chmod o= ./test.log
+chmod o&#x3D; .&#x2F;test.log
 # 使得所有用户都没有写权限。
-chmod a-w ./test.log
+chmod a-w .&#x2F;test.log
 # 当前用户具有所有权限，组用户有读写权限，其他用户只有读权限。
-chmod u=rwx, g=rw, o=r ./test.log
+chmod u&#x3D;rwx, g&#x3D;rw, o&#x3D;r .&#x2F;test.log
 # 等价的八进制数表示：
-chmod 754 ./test.log
+chmod 754 .&#x2F;test.log
 # 将目录以及目录下的文件都设置为所有用户拥有读写权限。
-# 注意，使用'-R'选项一定要保留当前用户的执行和读取权限，否则会报错！
-chmod -R a=rw ./testdir/
+# 注意，使用&#39;-R&#39;选项一定要保留当前用户的执行和读取权限，否则会报错！
+chmod -R a&#x3D;rw .&#x2F;testdir&#x2F;
 # 根据其他文件的权限设置文件权限。
-chmod --reference=./1.log  ./test.log
-</code></pre>
-</li>
+chmod --reference&#x3D;.&#x2F;1.log  .&#x2F;test.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>两图熟记</p>
 <ol>
 <li>  <img src="/frank-lee/2021/08/13/Linux/image-20210810184853875.png" class=""></li>
@@ -2032,11 +1974,11 @@ chmod --reference=./1.log  ./test.log
 </ul>
 <h3 id="vim的简单使用"><a href="#vim的简单使用" class="headerlink" title="vim的简单使用"></a>vim的简单使用</h3><ul>
 <li><p>安装vim</p>
-<pre class=" language-shell"><code class="language-shell">sudo apt update
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt update
 sudo apt upgrade
 # 推荐先执行前两步，进行更新
-sudo apt install vim
-</code></pre>
+sudo apt install vim<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  安装时无法fetch阿里镜像源，检查网络，断开代理，重启，更新并安装</p>
 </blockquote>
@@ -2405,14 +2347,12 @@ sudo apt install vim
 </li>
 <li><p>配置 —— <code>vim .vimrc</code></p>
 <p>  写入以下代码（无需注释）</p>
-<pre class=" language-shell"><code class="language-shell">set syntax=on        # 高亮
-set tabstop=4        # 设置缩进
-set softtabstop=4 
-set number            # 显示行号
-set enc=utf-8
-set showmatch        # 括号匹配
-</code></pre>
-</li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">set syntax&#x3D;on		# 高亮
+set tabstop&#x3D;4		# 设置缩进
+set softtabstop&#x3D;4 
+set number			# 显示行号
+set enc&#x3D;utf-8
+set showmatch		# 括号匹配<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>  显示行号后，快速进入该行行首 — 命令：<code>number + gg</code></p>
 </li>
 <li><p><code>vim .</code> —— 通过vim查看当前目录所有文件</p>
@@ -2434,13 +2374,13 @@ set showmatch        # 括号匹配
 </li>
 <li><p>使用Windows Terminal通过SSH连接虚拟机的Ubuntu（类putty）</p>
 <p>  配置Windows Terminal的json文件：</p>
-<pre><code>&#123;
-       &quot;guid&quot;: &quot;&#123;9db309df-38f6-4ad2-8970-03718f686545&#125;&quot;,
-     &quot;hidden&quot;: false,
-    &quot;name&quot;: &quot;Ubuntu-20.04x64&quot;,
-    &quot;commandline&quot;: &quot;ssh lee@192.168.136.135&quot;
-&#125;
-</code></pre>
+  <pre class="line-numbers language-none"><code class="language-none">&#123;
+   	&quot;guid&quot;: &quot;&#123;9db309df-38f6-4ad2-8970-03718f686545&#125;&quot;,
+ 	&quot;hidden&quot;: false,
+	&quot;name&quot;: &quot;Ubuntu-20.04x64&quot;,
+	&quot;commandline&quot;: &quot;ssh lee@192.168.136.135&quot;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>  注：guid通过guid生成工具产生：<a target="_blank" rel="noopener" href="http://www.guidgen.com/">www.guidgen.com</a></p>
 <p>  参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46207024/article/details/116572048">https://blog.csdn.net/qq_46207024/article/details/116572048</a></p>
@@ -2966,7 +2906,7 @@ set showmatch        # 括号匹配
                 <a href="/frank-lee/2021/08/14/BS%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
-                        <img src="/frank-lee/imges/3.jpg" class="responsive-img" alt="B/S笔记">
+                        <img src="/frank-lee/images/3.jpg" class="responsive-img" alt="B/S笔记">
                         
                         <span class="card-title">B/S笔记</span>
                     </div>
@@ -3250,7 +3190,7 @@ set showmatch        # 括号匹配
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">17.4k</span>
+                        class="white-color">17.8k</span>
             
             
             
