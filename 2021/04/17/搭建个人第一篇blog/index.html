@@ -30,7 +30,7 @@
 
     <script src="/frank-lee/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/frank-lee/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -536,9 +536,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/frank-lee/libs/prism/prism.css">
-        
 
         
 
@@ -555,10 +552,12 @@
 </li>
 <li><p>启动 Windows PowerShell</p>
 <p> 查看node版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-bash"><code class="language-bash">node -v
+</code></pre>
 <p> 查看包管理器版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> -v
+</code></pre>
+</li>
 <li><p>安装 git（2.30.0.2）</p>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
@@ -567,13 +566,21 @@
 </ol>
 <h2 id="hexo框架安装"><a href="#hexo框架安装" class="headerlink" title="hexo框架安装"></a>hexo框架安装</h2><ol>
 <li><p>利用镜像源下载安装cnpm</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm -- <span class="token assign-left variable">registry</span><span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm -- registry<span class="token operator">=</span>https://registry.npm.taobao.org
+</code></pre>
+</li>
 <li><p>查看cnpm版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash">cnpm -v
+</code></pre>
+</li>
 <li><p>安装hexo</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli
+</code></pre>
+</li>
 <li><p>验证是否成功</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash">hexo -v
+</code></pre>
+</li>
 <li><p>遇到问题：cnpm无法加载（系统禁止运行脚本）</p>
  <img src="/frank-lee/2021/04/17/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%AC%E4%B8%80%E7%AF%87blog/1.png" class="">
 
@@ -590,29 +597,31 @@
 <li><p> 打开blog所在文件夹，右键git bash即可</p>
 </li>
 <li><p>生成博客-启动博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre class=" language-bash"><code class="language-bash">hexo init
+hexo s
+</code></pre>
  <img src="/frank-lee/2021/04/17/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%AC%E4%B8%80%E7%AF%87blog/4.png" class="">
 
  <img src="/frank-lee/2021/04/17/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%AC%E4%B8%80%E7%AF%87blog/5.png" class=""></li>
 <li><p> 进入端口地址，可以看到自己的博客，切忌使用Ctrl+C</p>
 </li>
 <li><p>新建一个博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n <span class="token string">"My first blog"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-bash"><code class="language-bash">hexo n <span class="token string">"My first blog"</span>
+</code></pre>
  <img src="/frank-lee/2021/04/17/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%AC%E4%B8%80%E7%AF%87blog/6.png" class=""></li>
 <li><p> 进入 blog\source\_posts，找到 my-first-blog.md，用 typora 打开，写入内容</p>
 </li>
 <li><p>编辑完成后回到 git bash 输入</p>
 <p> 清理博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-bash"><code class="language-bash">hexo clean 
+</code></pre>
 <p> 生成博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-bash"><code class="language-bash">hexo g
+</code></pre>
 <p> 预览博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash">hexo s
+</code></pre>
+</li>
 </ol>
 <h2 id="部署到gitee上"><a href="#部署到gitee上" class="headerlink" title="部署到gitee上"></a>部署到gitee上</h2><ol>
 <li><p> 注册帐号，新建仓库（仓库名与昵称保持一致）</p>
@@ -653,18 +662,24 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 </ol>
 <h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><ol>
 <li><p>找到对应主题所在的地址</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git
+</code></pre>
+</li>
 <li><p>将其克隆后，修改_config.yml文件里的theme为对应名字</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean
+<pre class=" language-bash"><code class="language-bash">hexo clean
 hexo g
 hexo s
-hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+hexo d
+</code></pre>
+</li>
 </ol>
 <h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><ol>
 <li><p> 在最后 hexo s 打开博客时，本地端口不能用ctrl+c复制网址，否则会停止该操作，导致端口打不开，直接在网页输入即可。</p>
 </li>
 <li><p>若配置好后出现error deployer not found:git的情况，可以尝试在后面添加一行</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">message: blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-bash"><code class="language-bash">message: blog
+</code></pre>
+</li>
 <li><p> 注意配置文件中的空格。</p>
 </li>
 <li><p> 同时github上步骤很详细，按照步骤完全没有问题，注意区分站点下的config文件与theme下的config文件修改是不一样的，链接如下：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
@@ -683,18 +698,22 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <li><p>  直接<code>hexo n new_name</code>生成，自带文件夹</p>
 </li>
 <li><p>通过复制得到，需要在md文件首添加Front-matter，至少包括以下内容：</p>
-  <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token font-matter yaml language-yaml">title: 搭建个人第一篇blog
-date: 2021-4-17 16:19:00</span>
-<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre><code>---
+title: 搭建个人第一篇blog
+date: 2021-4-17 16:19:00
+---
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>  添加封面图到<code>/source/images/x.jpg</code>，并在Front-matter中添加img信息<code>/images/x.jpg</code></p>
 </li>
 <li><p>依次执行以下命令</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean
+<pre class=" language-shell"><code class="language-shell">hexo clean
 hexo g
-hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+hexo d
+</code></pre>
+</li>
 <li><p>  更新Gitee Pages 服务，刷新博客，打开查看</p>
 </li>
 </ol>
@@ -1505,7 +1524,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">15.5k</span>
+                        class="white-color">15.4k</span>
             
             
             
