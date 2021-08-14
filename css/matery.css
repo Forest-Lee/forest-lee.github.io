@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f469f 100%); /*修改成自己喜欢的颜色值*/
+    background-image: linear-gradient(to right, #0f9d58 0%, #0f469f 100%); /*修改成自己喜欢的颜色值*/
     opacity: 0.6;  /*透明效果值范围 0~1，看情况自己修改*/
 }
 
@@ -551,10 +551,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/* .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+} */
 
 .bg-cover:before,
 .bg-cover:after {
