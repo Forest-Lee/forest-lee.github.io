@@ -141,38 +141,38 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/frank-lee/musics">
+        <a href="/frank-lee/medias/musics">
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Music</span>
+          <span>Musics</span>
         </a>
       </li>
       
       <li>
-        <a href="/frank-lee/movies">
+        <a href="/frank-lee/medias/movies">
           
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Movie</span>
+          <span>Movies</span>
         </a>
       </li>
       
       <li>
-        <a href="/frank-lee/books">
+        <a href="/frank-lee/medias/books">
           
           <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Book</span>
+          <span>Books</span>
         </a>
       </li>
       
       <li>
-        <a href="/frank-lee/galleries">
+        <a href="/frank-lee/medias/galleries">
           
           <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>Gallery</span>
+          <span>Galleries</span>
         </a>
       </li>
       
@@ -296,41 +296,41 @@
               
                 <li>
 
-                  <a href="/frank-lee/musics " style="margin-left:75px">
+                  <a href="/frank-lee/medias/musics " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
 			      
-		          <span>Music</span>
+		          <span>Musics</span>
                   </a>
                 </li>
               
                 <li>
 
-                  <a href="/frank-lee/movies " style="margin-left:75px">
+                  <a href="/frank-lee/medias/movies " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
 			      
-		          <span>Movie</span>
+		          <span>Movies</span>
                   </a>
                 </li>
               
                 <li>
 
-                  <a href="/frank-lee/books " style="margin-left:75px">
+                  <a href="/frank-lee/medias/books " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
 			      
-		          <span>Book</span>
+		          <span>Books</span>
                   </a>
                 </li>
               
                 <li>
 
-                  <a href="/frank-lee/galleries " style="margin-left:75px">
+                  <a href="/frank-lee/medias/galleries " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
 			      
-		          <span>Gallery</span>
+		          <span>Galleries</span>
                   </a>
                 </li>
               
@@ -492,6 +492,103 @@
                 
             </div>
             <!--valine评论弹幕-->
+            
+                <p>
+                    <b>畅所欲言</b><br>
+                    <b>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链</b><br>
+                    <b>友链信息</b><br>
+                    <b>博客名称: Frank Lee</b><br>
+                    <b>博客网址: https://frank-f-lee.gitee.io/frank-lee</b><br>
+                    <b>博客头像: https://frank-f-lee.gitee.io/frank-lee/medias/logo.png</b><br>
+                    <b>博客介绍: 犹豫就会败北</b><br>
+                </p>
+                <div class="container">
+                    <section id="custom" class="bb-section">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        文字：<input class="form-control" name="info" type="text" placeholder="hello, world"/>
+                                    </div>
+                                    <div class="form-group">
+                                        链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
+                                    </div>
+                                    <div class="form-group">
+                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
+                                    </div>
+                                </form>
+                                <div class="form-group">
+                                    <button id="send"  class="btn" onclick="run()">留言</button>
+                                    <button id="clear" class="btn " onclick="clear_barrage()"> 清除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <script type="text/javascript">
+                    AV.init({
+                        appId: 'o3ANeS3LXgE3uFoeLOEDo1Di-MdYXbMMI',
+                        appKey: '64zI5JaMhCUvPRdgmiaeYdTQ'
+                    });
+
+                    $(function() {
+                        do_barrager();
+                        async function do_barrager() {
+                            let lists = [];
+                            //查询弹幕
+                            const query = new AV.Query('barrager');
+                            const barrager = await query.find().then((barrager) => {
+                                lists = barrager;
+                            })
+                            let length = lists.length;
+                            let index = 0;
+                            const timer = setInterval(() => {
+                                if (index === length) {
+                                    clearInterval(timer);
+                                    do_barrager()
+                                } else {
+                                    let obj = lists[index]
+                                    let jsonObject = eval('(' + JSON.stringify(obj) + ')');
+                                    $('body').barrager({
+                                        'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
+                                        'href': jsonObject.href,
+                                        'info': jsonObject.info,
+                                        'speed': jsonObject.speed
+                                    });
+                                    index++;
+                                }
+                            }, 500)
+                        }
+                    });
+
+                    //发送弹幕
+                    function  run(){
+                        let info = $('input[name=info]').val();
+                        (info === '' ) ?  info='hello world' : info=info;
+                        let href = $('input[name=href]').val();
+                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
+                        let speed = parseInt($('input[name=speed]').val());
+                        if(speed > 20 || speed < 5)
+                            speed = Math.floor(Math.random() * 10) + 5;
+                        const Barrager = AV.Object.extend('barrager');
+                        const barrager = new Barrager();
+                        barrager.set('href', href);
+                        barrager.set('info', info);
+                        barrager.set('speed', speed);
+                        barrager.save().then((todo) => {
+                            $(" input[ name='info' ] ").val("")
+                            $(" input[ name='href' ] ").val("")
+                            $(" input[ name='speed' ] ").val("")
+                        });
+                    }
+
+                    function  clear_barrage()
+                    {
+                        $.fn.barrager.removeAll();
+                    }
+
+                </script>
             
         </div>
 
