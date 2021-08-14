@@ -1306,23 +1306,23 @@ lee@fuck:~/Documents$ <span class="token function">cp</span> <span class="token 
 <li><p>  杀死进程：<code>kill PID</code></p>
 </li>
 <li><p>kill 详解</p>
-<h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h3><p>  发送信号到进程。</p>
-<h3 id="内建命令"><a href="#内建命令" class="headerlink" title="内建命令"></a>内建命令</h3><h4 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-s sigspec <span class="token operator">|</span> -n signum <span class="token operator">|</span> -sigspec<span class="token punctuation">]</span> pid <span class="token operator">|</span> jobspec <span class="token punctuation">..</span>.
+<h4 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h4><p>  发送信号到进程。</p>
+<h4 id="内建命令"><a href="#内建命令" class="headerlink" title="内建命令"></a>内建命令</h4><h5 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-s sigspec <span class="token operator">|</span> -n signum <span class="token operator">|</span> -sigspec<span class="token punctuation">]</span> pid <span class="token operator">|</span> jobspec <span class="token punctuation">..</span>.
 <span class="token function">kill</span> -l <span class="token punctuation">[</span>sigspec<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>  注：pid：进程ID，jobspec：作业标识符</p>
 </blockquote>
-<h4 id="主要用途-2"><a href="#主要用途-2" class="headerlink" title="主要用途"></a>主要用途</h4><ul>
+<h5 id="主要用途-2"><a href="#主要用途-2" class="headerlink" title="主要用途"></a>主要用途</h5><ul>
 <li>  发送信号到作业或进程（可以为多个）。</li>
 <li>  列出信号。</li>
 </ul>
-<h4 id="选项-7"><a href="#选项-7" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s sig    信号名称。
+<h5 id="选项-7"><a href="#选项-7" class="headerlink" title="选项"></a>选项</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s sig    信号名称。
 -n sig    信号名称对应的数字。
 -l        列出信号名称。如果在该选项后提供了数字那么假设它是信号名称对应的数字。
 -L        等价于-l选项。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>user2@pc<span class="token punctuation">]</span> <span class="token function">kill</span> -l <span class="token number">9</span>
+<h5 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>user2@pc<span class="token punctuation">]</span> <span class="token function">kill</span> -l <span class="token number">9</span>
 KILL
 
 <span class="token comment"># 列出所有信号名称：</span>
@@ -1360,14 +1360,14 @@ STOP   <span class="token number">19</span>    暂停（同 Ctrl + Z）
 <span class="token punctuation">[</span>user2@pc<span class="token punctuation">]</span> <span class="token function">kill</span> -n <span class="token number">9</span> PID
 <span class="token punctuation">[</span>user2@pc<span class="token punctuation">]</span> <span class="token function">kill</span> -9 PID<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ol>
 <li> <code>bash</code>的作业控制命令包括<code>bg fg kill wait disown suspend</code>。</li>
 <li> 该命令是bash内建命令，相关的帮助信息请查看<code>help</code>命令。</li>
 </ol>
-<h3 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h3><h4 id="概要-1"><a href="#概要-1" class="headerlink" title="概要"></a>概要</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-signal<span class="token operator">|</span>-s signal<span class="token operator">|</span>-p<span class="token punctuation">]</span> <span class="token punctuation">[</span>-q value<span class="token punctuation">]</span> <span class="token punctuation">[</span>-a<span class="token punctuation">]</span> <span class="token punctuation">[</span>--<span class="token punctuation">]</span> pid<span class="token operator">|</span>name<span class="token punctuation">..</span>.
+<h4 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h4><h5 id="概要-1"><a href="#概要-1" class="headerlink" title="概要"></a>概要</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">kill</span> <span class="token punctuation">[</span>-signal<span class="token operator">|</span>-s signal<span class="token operator">|</span>-p<span class="token punctuation">]</span> <span class="token punctuation">[</span>-q value<span class="token punctuation">]</span> <span class="token punctuation">[</span>-a<span class="token punctuation">]</span> <span class="token punctuation">[</span>--<span class="token punctuation">]</span> pid<span class="token operator">|</span>name<span class="token punctuation">..</span>.
 <span class="token function">kill</span> -l <span class="token punctuation">[</span>number<span class="token punctuation">]</span> <span class="token operator">|</span> -L<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="选项-8"><a href="#选项-8" class="headerlink" title="选项"></a>选项</h4>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s, --signal signal    要发送的信号，可能是信号名称或信号对应的数字。
+<h5 id="选项-8"><a href="#选项-8" class="headerlink" title="选项"></a>选项</h5>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-s, --signal signal    要发送的信号，可能是信号名称或信号对应的数字。
 -l, --list <span class="token punctuation">[</span>number<span class="token punctuation">]</span>    打印信号名称或转换给定数字到信号名称。信号名称可参考文件（/usr/include/linux/signal.h）。
 -L, --table            和<span class="token string">'-l'</span>选项类似，但是输出信号名称以及信号对应的数字。
 -a, --all              不要限制“命令名到pid”的转换为具有与当前进程相同的<span class="token environment constant">UID</span>的进程。
