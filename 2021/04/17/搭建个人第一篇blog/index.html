@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    679
+                    801
                 </div>
                 
 
@@ -592,7 +592,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
   <img src="/frank-lee/2021/04/17/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%AC%E4%B8%80%E7%AF%87blog/12.png" class="">
 
 <p>  成功解决：</p>
-<p>  在 E:\blog 安装插件，即可正常使用 hexo d 命令</p>
+<p>  在 <code>E:\blog</code> 安装插件，即可正常使用 <code>hexo d</code> 命令</p>
 </li>
 </ul>
 </li>
@@ -619,6 +619,29 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <blockquote>
 <p>  参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_43401436/article/details/107191688">https://blog.csdn.net/m0_43401436/article/details/107191688</a></p>
 </blockquote>
+</li>
+</ol>
+<h2 id="以后操作"><a href="#以后操作" class="headerlink" title="以后操作"></a>以后操作</h2><ol>
+<li><p>  进入<code>E:/blog</code>目录，通过<code>git bash</code>打开</p>
+</li>
+<li><p>新建博客</p>
+<ul>
+<li><p>  直接<code>hexo n new_name</code>生成，自带文件夹</p>
+</li>
+<li><p>通过复制得到，需要在md文件首添加Front-matter，至少包括以下内容：</p>
+  <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token font-matter yaml language-yaml">title: 搭建个人第一篇blog
+date: 2021-4-17 16:19:00</span>
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>  添加封面图到<code>/source/images/x.jpg</code>，并在Front-matter中添加img信息<code>/images/x.jpg</code></p>
+</li>
+<li><p>依次执行以下命令</p>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean
+hexo g
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p>  更新Gitee Pages 服务，刷新博客，打开查看</p>
 </li>
 </ol>
 
@@ -1154,7 +1177,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">15.4k</span>
+                        class="white-color">15.5k</span>
             
             
             
