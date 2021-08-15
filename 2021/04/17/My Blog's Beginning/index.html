@@ -390,7 +390,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    806
+                    797
                 </div>
                 
 
@@ -429,7 +429,7 @@
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p> 查看包管理器版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>安装 git（2.30.0.2）</p>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
@@ -438,11 +438,11 @@
 </ol>
 <h2 id="hexo框架安装"><a href="#hexo框架安装" class="headerlink" title="hexo框架安装"></a>hexo框架安装</h2><ol>
 <li><p>利用镜像源下载安装cnpm</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install -g cnpm -- registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm -- <span class="token assign-left variable">registry</span><span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>查看cnpm版本</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>安装hexo</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>验证是否成功</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>遇到问题：cnpm无法加载（系统禁止运行脚本）</p>
@@ -470,7 +470,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <li><p> 进入端口地址，可以看到自己的博客，切忌使用Ctrl+C</p>
 </li>
 <li><p>新建一个博客</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n &quot;My first blog&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n <span class="token string">"My first blog"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
  <img src="/frank-lee/2021/04/17/My%20Blog's%20Beginning/6.png" class=""></li>
 <li><p> 进入 blog\source\_posts，找到 my-first-blog.md，用 typora 打开，写入内容</p>
@@ -524,7 +524,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 </ol>
 <h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><ol>
 <li><p>找到对应主题所在的地址</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>将其克隆后，修改_config.yml文件里的theme为对应名字</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean
 hexo g
@@ -1372,7 +1372,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">17.9k</span>
+                        class="white-color">17.6k</span>
             
             
             
