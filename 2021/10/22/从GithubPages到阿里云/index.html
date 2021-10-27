@@ -463,7 +463,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    982
+                    960
                 </div>
                 
 
@@ -596,17 +596,16 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
 
 
 <ol start="4">
-<li>写入信息</li>
+<li><p>写入信息</p>
+<ul>
+<li><p>获取并复制本地SSH公钥并写入服务器<code>/home/git/.ssh/authorized_keys</code>(没有则创建)文件</p>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>在<code>/home/git/hexo/hooks/post-receive</code>(没有则创建)文件中写入：</p>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+<span class="token function">git</span> --work-tree<span class="token operator">=</span>/var/www/html/forest-lee.github.io --git-dir<span class="token operator">=</span>/home/git/hexo.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
 </ol>
-<p>&ensp;&ensp;&ensp;&ensp;- 获取并复制本地SSH公钥并写入服务器<code>/home/git/.ssh/authorized_keys</code>(没有则创建)文件中</p>
-<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-<p>&ensp;&ensp;&ensp;&ensp;- 在<code>/home/git/hexo/hooks/post-receive</code>(没有则创建)文件中写入：</p>
-<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">#!&#x2F;bin&#x2F;sh
-git --work-tree&#x3D;&#x2F;var&#x2F;www&#x2F;html&#x2F;forest-lee.github.io --git-dir&#x3D;&#x2F;home&#x2F;git&#x2F;hexo.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
 <ol start="5">
 <li>修改本地_config.yml文件</li>
 </ol>
