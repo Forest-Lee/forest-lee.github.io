@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="从Github Pages到阿里云, Frank Lee&#39;s Blog">
+    <meta name="keywords" content="Hexo从Github Pages到阿里云, Frank Lee&#39;s Blog">
     <meta name="description" content="学习、交流、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>从Github Pages到阿里云 | Frank Lee&#39;s Blog</title>
+    <title>Hexo从Github Pages到阿里云 | Frank Lee&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -300,7 +300,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">从Github Pages到阿里云</h1>
+                    <h1 class="description center-align post-title">Hexo从Github Pages到阿里云</h1>
                 </div>
             </div>
         </div>
@@ -488,11 +488,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="从Github-Pages到阿里云"><a href="#从Github-Pages到阿里云" class="headerlink" title="从Github Pages到阿里云"></a>从Github Pages到阿里云</h1><blockquote>
+                <h1 id="Hexo从Github-Pages到阿里云"><a href="#Hexo从Github-Pages到阿里云" class="headerlink" title="Hexo从Github Pages到阿里云"></a>Hexo从Github Pages到阿里云</h1><blockquote>
 <p>Reference：<a target="_blank" rel="noopener" href="http://wu.run/2018/12/20/hexo-from-github-2-aliyun/">http://wu.run/2018/12/20/hexo-from-github-2-aliyun/</a></p>
 </blockquote>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本次迁移，实质是将个人域名正确指向阿里云内地服务器节点，以符合阿里云备案要求。</p>
-<img src="/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/image.png" class="" title="阿里云备案核查通知">
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image.png" class="" title="阿里云备案核查通知">
 
 <p>附：<a target="_blank" rel="noopener" href="https://help.aliyun.com/noticelist/articleid/1060895544.html?spm=a2c4g.788314815.n2.6.5f3c4c07Vmay0j">关于阿里云用户ICP备案情况自查的通知</a>，<a target="_blank" rel="noopener" href="https://beian.aliyun.com/pcContainer/domainCheck">备案接入准确性检查链接</a></p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h3><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">ssh root@106.14.97.210<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -537,7 +537,7 @@ git config --global user.email &quot;your email&quot;<span aria-hidden="true" cl
 <pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
-<img src="/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/image_1.png" class="">
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_1.png" class="">
 
 <ul>
 <li>查看并添加ssh key信息到github</li>
@@ -548,7 +548,7 @@ git config --global user.email &quot;your email&quot;<span aria-hidden="true" cl
 <h2 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h2><ul>
 <li>进入<code>/var/www/html</code>，clone博客源代码</li>
 </ul>
-<img src="/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/image_2.png" class="">
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_2.png" class="">
 
 <ul>
 <li>修改<code>/etc/nginx/sites-available/default</code>文件中server下的root字段值为clone的博客目录路径</li>
@@ -570,7 +570,7 @@ git config --global user.email &quot;your email&quot;<span aria-hidden="true" cl
 
 <p>这时，就可以通过访问阿里云服务器的公网IP查看个人博客（这里个人发生了一点小插曲：修改后访问ip显示404页面，一直以为是配置问题，结果是路径打错了QAQ）</p>
 <h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>使用已购买并备案的域名，解析至阿里云服务器的公网IP。</p>
-<img src="/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/image_3.png" class="">
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_3.png" class="">
 
 <h2 id="自动同步"><a href="#自动同步" class="headerlink" title="自动同步"></a>自动同步</h2><h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>经过上述操作，我们实质是将博客源代码git clone到路径<code>/var/www/html/forest-lee.github.io</code>，如果需要对博客进行修改或发布新文章，运行<code>hexo d</code>还是只能将新源码pull到github及gitee上，而无法自动上传到服务器上。要想同步修改，还是需要在服务器上的博客路径删除源码并重新git clone，非常麻烦。</p>
 <h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>解决方法很简单，只需要在阿里云服务器上搭建一个Git远程仓库，每次通过<code>hexo d</code>更新源码时，也同步更新至服务器仓库中，并自动同步到<code>/var/www/html/forest-lee.github.io</code>中。</p>
@@ -624,7 +624,7 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
 <p>需要申请过SSL证书，并在服务器上配置了SSL证书后才能通过443端口访问https页面。</p>
 </blockquote>
 <p>至此，你已经可以通过<code>hexo d</code>直接将博客源码上传到gitee、github及服务器。</p>
-<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><img src="/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/image_4.png" class="" title="博客源码上传效果图">
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_4.png" class="" title="博客源码上传效果图">
 
 
                 
@@ -652,7 +652,7 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://forest-lee.github.io/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/">https://forest-lee.github.io/2021/10/22/%E4%BB%8EGithubPages%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/</a>
+                    <a href="https://forest-lee.github.io/2021/10/22/hexo-from-GithubPages-2-aliyun/">https://forest-lee.github.io/2021/10/22/hexo-from-GithubPages-2-aliyun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
