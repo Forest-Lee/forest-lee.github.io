@@ -463,7 +463,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    961
+                    1.1k
                 </div>
                 
 
@@ -596,14 +596,12 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
 
 <ol start="4">
 <li><p>写入信息</p>
-<ul>
-<li><p>获取并复制本地SSH公钥并写入服务器<code>/home/git/.ssh/authorized_keys</code>(没有则创建)文件</p>
-  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>在<code>/home/git/hexo.git/hooks/post-receive</code>(没有则创建)文件中写入：</p>
-  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
+<p> 获取并复制本地SSH公钥并写入服务器<code>/home/git/.ssh/authorized_keys</code>(没有则创建)文件</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> 在<code>/home/git/hexo.git/hooks/post-receive</code>(没有则创建)文件中写入：</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
 <span class="token function">git</span> --work-tree<span class="token operator">=</span>/var/www/html/forest-lee.github.io --git-dir<span class="token operator">=</span>/home/git/hexo.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-</ul>
-</li>
 </ol>
 <ol start="5">
 <li>修改本地_config.yml文件</li>
@@ -617,14 +615,25 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
   brach: master
   message: blog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-<h3 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h3><p>将域名正确解析到公网ip后，发现直接访问域名<code>forestlee.top</code>被拒绝<code>ERR_CONNECTION_CLOSED</code>，而<code>www.forestlee.top</code>可以正常访问；咨询阿里云人工客服，最终找到原因。</p>
+<h3 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h3><h4 id="域名无法正常访问"><a href="#域名无法正常访问" class="headerlink" title="域名无法正常访问"></a>域名无法正常访问</h4><p>将域名正确解析到公网ip后，发现直接访问域名<code>forestlee.top</code>被拒绝<code>ERR_CONNECTION_CLOSED</code>，而<code>www.forestlee.top</code>可以正常访问；咨询阿里云客服，最终找到原因——<strong>浏览器的缓存导致访问域名时直接添加了https</strong>，而没有进行SSL申请，不能访问https页面。</p>
 <blockquote>
 <p>服务器443端口无法访问，所以https页面无法打开，目前应该是浏览器的缓存使直接访问域名添加了https，这边浏览器没有自动添加https，所以这边可以访问的。您可以清理缓存后直接访问<a target="_blank" rel="noopener" href="http://forestlee.top/?spm=5176.smartservice_service_robot-chat.0.0.59b1709acVejCS">http://forestlee.top</a>。</p>
 <p>需要申请过SSL证书，并在服务器上配置了SSL证书后才能通过443端口访问https页面。</p>
 </blockquote>
-<p>至此，你已经可以通过<code>hexo d</code>直接将博客源码上传到gitee、github及服务器。</p>
-<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_4.png" class="" title="博客源码上传效果图">
+<h4 id="伪自动同步"><a href="#伪自动同步" class="headerlink" title="伪自动同步"></a>伪自动同步</h4><p>本人在初次完成以上步骤后，发现<code>hexo d</code>提交时，博客源码并没有自动同步到服务器上。</p>
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/image_4.png" class="">
+
+<blockquote>
+<p>其实从上图中的”hint: The ‘hooks/post-receive’ hook was ignored because it’s not set as executable.”就可以略窥一二了。</p>
+</blockquote>
+<p>为此，我尝试了多次（重建服务器git仓库…），最后在和<a target="_blank" rel="noopener" href="https://npfs06.top/">npfs</a>的交流中找到了问题所在——**<code>post-receive</code>文件的权限问题**</p>
+<img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/chmod.png" class="" title="更改post-receive权限">
+
+<blockquote>
+<p>  由此足见Linux文件权限的重要性，学习指路：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chmod.html">Linux chmod 命令</a></p>
+</blockquote>
+<p>至此，你已经可以通过<code>hexo d</code>直接将博客源码上传到gitee、github并自动同步到服务器。</p>
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><img src="/2021/10/22/hexo-from-GithubPages-2-aliyun/final.png" class="" title="博客源码上传效果图">
 
 
                 
@@ -1137,36 +1146,57 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/10/28/test/">
+                <a href="/2021/10/22/hexo-from-GithubPages-2-aliyun/">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/Forest-Lee/forestlee-imgs/images/GhostBlade/nap1.jpg" class="responsive-img" alt="Hexo从Github Pages到阿里云">
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="test">
-                        
-                        <span class="card-title">test</span>
+                        <span class="card-title">Hexo从Github Pages到阿里云</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            将个人域名指向阿里云服务器，以符合备案要求
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-22
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Frank Lee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Blog/" class="post-category">
+                                    Blog
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                    <a href="/tags/aliyun/">
+                        <span class="chip bg-color">aliyun</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1421,7 +1451,7 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">18.6k</span>
+                        class="white-color">18.8k</span>
             
             
             
