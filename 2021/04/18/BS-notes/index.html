@@ -571,10 +571,10 @@
 <p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10/">https://www.microsoft.com/zh-cn/software-download/windows10/</a></p>
 </blockquote>
 <p><strong>Ctrl + Alt    释放鼠标，回到真实机</strong></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 备忘录——这台电脑用来学习的Ubuntu Server虚拟机
-# ip
-~$ ifconfig
-# login
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 备忘录——这台电脑用来学习的Ubuntu Server虚拟机</span>
+<span class="token comment"># ip</span>
+~$ <span class="token function">ifconfig</span>
+<span class="token comment"># login</span>
 login as:frank
 pswd:123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -587,25 +587,25 @@ pswd:123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 </blockquote>
 <ul>
 <li><p>拿到系统先更新</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>设置root密码</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo passwd root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">passwd</span> root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>小火车试运行：sl</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt install sl
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> sl
 sl<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li><p>其他操作</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Ctrl+L # 清屏
-Ctrl+U # 清行
-ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Ctrl+L <span class="token comment"># 清屏</span>
+Ctrl+U <span class="token comment"># 清行</span>
+<span class="token function">ls</span> -a <span class="token comment"># 查看隐藏文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>安装必要软件</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h4 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h4><ul>
 <li><p>本质——传输命令</p>
 <p>  eg：在Putty中输入ls命令，通过SSH协议连接到ubuntu虚拟机，执行ls命令，然后返回结果给Putty</p>
 </li>
 <li><p>SSH连接</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ssh id@xxx.xxx.x.x(IP)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">ssh</span> id@xxx.xxx.x.x<span class="token punctuation">(</span>IP<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>  公司不会给你暴露IP地址，但会给你密钥，你离职时会删除</p>
 </li>
 <li><p>  推荐：XShell 功能更强，但是要钱；我们用的是Putty。</p>
@@ -619,31 +619,31 @@ ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><sp
 </ol>
 </li>
 <li><p>查看IP</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ifconfig<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">ifconfig</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>查看内存（-m 以MB为单位 ~代表用户目录）</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">free -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">free</span> -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>  补全命令 —— <code>tab</code>键</p>
 </li>
 <li><p>进入工程文件夹</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">vim .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">vim</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h4 id="Linux中安装软件举例"><a href="#Linux中安装软件举例" class="headerlink" title="Linux中安装软件举例"></a>Linux中安装软件举例</h4><ul>
 <li><p>安装nodejs</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install nodejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> nodejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>安装yarn —— <strong>“安全+可靠+快”的包管理器（基于npm)</strong></p>
 <ol>
 <li><p>第一步——配置仓库</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">curl -sS https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F;pubkey.gpg | sudo apt-key add -echo &quot;deb https:&#x2F;&#x2F;dl.yarnpkg.com&#x2F;debian&#x2F; stable main&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;yarn.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">curl</span> -sS https://dl.yarnpkg.com/debian/pubkey.gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -echo <span class="token string">"deb https://dl.yarnpkg.com/debian/ stable main"</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/yarn.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>第二步——安装</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get update &amp;&amp; sudo apt-get install yarn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">yarn</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>第三步——检查</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>配置</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn config set registry https:&#x2F;&#x2F;registry.yarnpkg.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> config <span class="token builtin class-name">set</span> registry https://registry.yarnpkg.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 </li>
 <li><p>安装pm2</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn global add pm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> global <span class="token function">add</span> pm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h3 id="后端语言：Java-Go-Nodejs-C-NET-Python-PHP"><a href="#后端语言：Java-Go-Nodejs-C-NET-Python-PHP" class="headerlink" title="后端语言：Java/Go/Nodejs/C#(.NET)/Python/PHP"></a>后端语言：Java/Go/Nodejs/C#(.NET)/Python/PHP</h3><blockquote>
 <p>JSP –&gt; 在html里面扩展java代码 eg: &lt;%for…%&gt;</p>
@@ -661,14 +661,14 @@ ls -a # 查看隐藏文件<span aria-hidden="true" class="line-numbers-rows"><sp
 <h4 id="Express的搭建"><a href="#Express的搭建" class="headerlink" title="Express的搭建"></a>Express的搭建</h4><ul>
 <li>基于 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a> 平台，快速、开放、极简的 Web 开发框架</li>
 </ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yarn init
-git init
-yarn add express # 安装
-touch app.js # 复制helloworld代码
-node app.js # 启动服务
-# 在app.js中app.get()上添加：app.use(express.static(&#39;public&#39;));
-mkdir public
-cd public~$ vim hello.html # 随便写个静态网页~$ cd ..~$ node app.js # 启动服务，进入&#x2F;public，就看的到了<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">yarn</span> init
+<span class="token function">git</span> init
+<span class="token function">yarn</span> <span class="token function">add</span> express <span class="token comment"># 安装</span>
+<span class="token function">touch</span> app.js <span class="token comment"># 复制helloworld代码</span>
+node app.js <span class="token comment"># 启动服务</span>
+<span class="token comment"># 在app.js中app.get()上添加：app.use(express.static('public'));</span>
+<span class="token function">mkdir</span> public
+<span class="token builtin class-name">cd</span> public~$ <span class="token function">vim</span> hello.html <span class="token comment"># 随便写个静态网页~$ cd ..~$ node app.js # 启动服务，进入/public，就看的到了</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h4><ul>
 <li><p>PM2是一个进程管理工具，可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能</p>
@@ -742,7 +742,7 @@ pm2 start app.js # 启动服务，可以在同个工程下页面间互相链接�
 <li><p>  最好的程序猿网站</p>
 </li>
 <li><p>git克隆（尽量别直接Download）</p>
-  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git clone url<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> clone url<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h2 id="10-注意休息，-尽可能不要透支身体"><a href="#10-注意休息，-尽可能不要透支身体" class="headerlink" title="10. 注意休息， 尽可能不要透支身体"></a>10. 注意休息， 尽可能不要透支身体</h2><blockquote>
 <p>  总结：本文是B/S预备方向课程笔记，偏向方向了解，由于记录时间较早，排版和格式较一般。</p>
