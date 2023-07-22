@@ -496,10 +496,10 @@
 </li>
 <li><p>启动 Windows PowerShell</p>
 <p> 查看node版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">node</span> <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p> 查看包管理器版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>安装 git（2.30.0.2）</p>
 <blockquote>
 <p>  <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
@@ -508,13 +508,13 @@
 </ol>
 <h1 id="hexo框架安装"><a href="#hexo框架安装" class="headerlink" title="hexo框架安装"></a>hexo框架安装</h1><ol>
 <li><p>利用镜像源下载安装cnpm</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm -- <span class="token assign-left variable">registry</span><span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> cnpm -- <span class="token assign-left variable">registry</span><span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>查看cnpm版本</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>安装hexo</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>验证是否成功</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>遇到问题：cnpm无法加载（系统禁止运行脚本）</p>
  <img src="/2021/04/17/Beginning/1.png" class="">
 

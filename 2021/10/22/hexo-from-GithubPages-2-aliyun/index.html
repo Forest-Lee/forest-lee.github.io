@@ -599,7 +599,7 @@ git init --bare hexo.git<span aria-hidden="true" class="line-numbers-rows"><span
 
 <p> 在<code>/home/git/hexo.git/hooks/post-receive</code>(没有则创建)文件中写入：</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
-<span class="token function">git</span> --work-tree<span class="token operator">=</span>/var/www/html/forest-lee.github.io --git-dir<span class="token operator">=</span>/home/git/hexo.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<span class="token function">git</span> --work-tree<span class="token operator">=</span>/var/www/html/forest-lee.github.io --git-dir<span class="token operator">=</span>/home/git/hexo.git checkout <span class="token parameter variable">-f</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ol>
 <ol start="5">
 <li>修改本地_config.yml文件</li>
